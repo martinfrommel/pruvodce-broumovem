@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import PamatkyGrid from '../components/PamatkyGrid.astro';
+
+import indexblobs from '../assets/bg/index/indexBlobs.svg';
+---
+
+<Layout title="Průvodce Broumovem">
+
+<div id="container" class="flex flex-col space-y-10 lg:flex-row lg:space-x-10 items-center justify-evenly">
+  <section id="welcome" class="flex basis-6/12 flex-col flex-auto flex-wrap lg:text-justify bg-secondary/10 p-5 rounded-md">
+    <h1>
+      <p>
+      <span class="text-secondary tracking-wide font-light text-2xl">Přijměte pozvánku na</span>
+      <br/>
+      <span class="tracking-widest leading-relaxed font-bold uppercase">procházku Broumovem</span>
+      <br/>
+      <span class="text-secondary tracking-wide font-light text-2xl">s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století</span>
+    </p>
+      </h1>
+      <p class="mt-3">
+        <h2 class="font-normal text-2xl">Co vás čeká?</h2>
+      </p>
+      <p class="mt-5 text-[1.1rem] font-light tracking-wider">
+        Během procházky se setkáte s pozůstatky architektonické  a urbanistické citlivosti budovatelů města z přelomu 19. a 20. století, o jehož rozvoj se zasloužily rodiny Schrollových, Dimterových, Nowotných, Meierových, Pollackových a další. V té době město vzkvétalo především díky bohatství plynoucímu z rozvinutého textilního průmyslu.
+        Původní podoba mnohých vil se nedochovala, stejně jako některé obytné a průmyslové stavby. Některé objekty byly zcela zbořeny, jinde ubral na kráse zub času, nedostatečná péče a nebo necitlivé stavební zásahy. Jen málo budov se dočkalo rekonstrukcí, které jim vrátily jejich půvab.
+        K vilám patřily neodmyslitelně zahrady s altány a oranžeriemi. Zahrady a parky jsou v současnosti většinou veřejně přístupné jako součást městské zeleně. Ačkoli jsou moderně upravovány, své kouzlo si částečně uchovaly dodnes.
+        Přejeme vám na procházce historií s naším průvodcem příjemné zážitky!
+      </p>
+  </section>
+
+  <section class="flex-auto basis-1/6 -z-10" >
+    <img class="w-full h-full" src={indexblobs} />
+  </section>
+</div>
+
+<PamatkyGrid />
+
+
+</Layout>
+
+<style>
+
+</style>
+

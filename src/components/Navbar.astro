@@ -1,0 +1,54 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<nav id="menu" class="flex flex-wrap flex-row space-x-5 items-center mt-5 md:mt-0">
+  <a class={currentPath === "" ? "active " : "inactive"} href="/">Domů</a>
+    <a class={currentPath === "o-projektu" ? "active " : "inactive"} href="/o-projektu">O projektu</a>
+    <a class={currentPath === "pamatky" ? "active " : "inactive"} href="/pamatky">Památky</a>
+    <a class={currentPath === "partneri" ? "active " : "inactive"} href="/partneri">Partneři</a>
+</nav>
+
+<style>
+  .inactive {
+    @apply  transition-all ease-bounce;
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 2px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+	}
+
+	.inactive:hover {
+		background-size: 100% 2px;
+		background-position: 0 100%
+	}
+
+.active {
+  @apply  transition-all ease-bounce;
+    border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 100% 2px;
+		background-position: 100% 100%;
+		background-repeat: no-repeat;
+    }
+
+    .active:hover {
+    border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 2px;
+		background-position: 100% 100%;
+		background-repeat: no-repeat;
+    }
+</style>
+<!--
+<script>
+const menu = document.getElementById('menu')
+  async function toggleMenu() {
+
+    menu.classList.toggle('hidden')
+    menu.classList.toggle('')
+}
+</script>
+ -->

@@ -1,0 +1,23 @@
+---
+import { Picture } from '@astrojs/image/components'
+---
+
+<footer class="w-full max-h-fit bg-tertiary p-7 flex flex-wrap flex-row flex-auto items-center justify-center justify-self-end text-xs bottom-0 text-slate-900">
+  <div id="sponsors" class="flex flex-wrap flex-col justify-center items-center space-y-4">
+    <p class="font-bold">Sponzoři:</p>
+    <div id="sponsors-logos" class="flex flex-row flex-wrap justify-center items-center space-x-5">
+      <Picture src={import ("../assets/img/partneri/broumovLogo.png")} widths={[100]} sizes="(max-width: 20%)" aspectRatio="1:1" alt="Město Broumov"/>
+      <Picture src={import ("../assets/img/partneri/euLogo.png")} widths={[100,200]} sizes="(max-width: 20%)" aspectRatio="39:11" alt="S podporou Evropské Unie"/>
+      <Picture src={import ("../assets/img/partneri/irpLogo.png")} widths={[100]} sizes="(max-width: 20%)" aspectRatio="18:9" alt="Institut Regionální Paměti"/>
+      </div>
+      <div id="copyright" class="flex flex-col flex-wrap space-y-4 justify-center items-center">
+        <p>
+        <span class="font-bold">Kontakt: </span> <a class="underline" href="mailto:info@pruvodcebroumovem.cz" target="_self">info@pruvodcebroumovem.cz</a>
+      </p>
+        <p>
+        Proudly built by <span class="underline">Martin Frommel</span> with <span class="underline font-mono">Astro</span>
+      </p>
+      </div>
+</div>
+
+</footer>

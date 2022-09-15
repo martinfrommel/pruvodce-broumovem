@@ -1,0 +1,40 @@
+---
+import Card from "./Card.astro";
+
+const pamatky = (await Astro.glob('../pages/[lang]/pamatky/[trasa]/*.md')).sort(
+    (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
+    );
+
+---
+
+<section id="pamatky" class="z-10">
+<ul class="flex flex-wrap flex-auto items-stretch justify-evenly">
+  { pamatky.map(pamatka =>(
+    <li id={pamatka.frontmatter.id} class="flex md:flex-row flex-col-reverse flex-nowrap md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-3 rounded-md items-start justify-start flex-auto lg:basis-1/4 md:text-justify m-3">
+      {pamatka.frontmatter.image &&
+        <img class="md:max-w-[40%] place-self-center" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
+      }
+        <div class="flex flex-col flex-wrap justify-start items-start">
+          <a href={`${pamatka.frontmatter.lang}/pamatky/${pamatka.frontmatter.trasa}/${pamatka.frontmatter.slug}`}>
+            <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
+          </a>
+          <hr />
+          <p>{pamatka.frontmatter.excerpt}</p>
+          <a class="p-3 bg-quarternary text-secondary md:mt-3 rounded-md hover:scale-105 transition-all ease-in-out my-3 md:my-0" href={`${pamatka.frontmatter.lang}/pamatky/${pamatka.frontmatter.trasa}/${pamatka.frontmatter.slug}`}>Zobrazit památku</a>
+          </div>
+      </li>
+
+  ))}
+</ul>
+
+</section>
+
+<style>
+  hr {
+    @apply border w-full mb-3;
+  }
+
+  h3 {
+    @apply leading-tight text-lg mb-3
+  }
+</style>
