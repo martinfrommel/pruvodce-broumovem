@@ -1,10 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import { generateCategoryData } from "../utils/helpers.js";
 import Card from "../components/Card.astro";
 
 
 const { frontmatter } = Astro.props;
+
+const allCategoriesData = generateCategoryData(frontmatter.categories);
+console.log(allCategoriesData);
 ---
 <Layout title={frontmatter.title}>
 
@@ -14,7 +17,7 @@ const { frontmatter } = Astro.props;
         <img class="md:max-w-[40%] h-auto aspect-auto md:mr-5 mt-5 md:mt-0 flex-auto" src={frontmatter.image} alt={frontmatter.title} />
         }
       <Card>
-        <article class="flex flex-col text-left md:text-justify justify-start items-start space-y-4">
+        <article class="inline-block text-left md:text-justify justify-start items-start space-y-4">
           <h1 class="lg:leading-loose leading-relaxed mb-3">{frontmatter.id}. {frontmatter.title}</h1>
           <slot />
         </article>

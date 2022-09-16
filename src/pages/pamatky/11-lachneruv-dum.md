@@ -2,9 +2,9 @@
 layout: ../../layouts/PamatkaSingleLayout.astro
 id: 11
 title: Lachnerův dům
-slug: lachneruv-dum
 excerpt: Zahradní domek s mansardovou střechou a pavlačí, jenž stával ve svahu pod farním kostelem sv. Petra a Pavla, patřil k nejzajímavějším dřevěným lidovým stavbám na Broumovsku.
-trasa: trasa-a
+categories:
+  - Trasa A
 image: "../src/pages/pamatky/images/11.png"
 lang: cs
 ---

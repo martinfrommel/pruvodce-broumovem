@@ -2,9 +2,9 @@
 layout: ../../layouts/PamatkaSingleLayout.astro
 id: 10
 title: Střelnice, chlapecká škola, kostel sv. Petra a Pavla čp. 227 – dnes společenský sál města
-slug: strelnice-chlapecka-skola-kostel-sv-petra-a-pavla
 excerpt: Pohledu na město od západu po staletí vévodil farní kostel sv. Petra a Pavla, který je poprvé zmiňován v písemnostech z roku 1258. V této době byl dřevěný, jeho současná barokní podoba pochází z konce 17. století. Od roku 1883 přibyla další dominanta, klasicistní budova chlapecké školy, dnešní základní školy. Pod ní plynule pokračovala jírovcová alej z nedalekého parku Alejka, ale musela ustoupit budování silnice.
-trasa: trasa-a
+categories:
+  - Trasa A
 image: "../src/pages/pamatky/images/10.png"
 lang: cs
 ---

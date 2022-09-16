@@ -2,9 +2,9 @@
 layout: ../../layouts/PamatkaSingleLayout.astro
 id: 8
 title: Langer – Schrollova vila čp. 30 – dnes Poliklinika Broumov
-slug: langer-schrollova-vila
 excerpt: Přízemí této vily vzniklo těsně před rokem 1900, později byl objekt dostavěn do dnešní podoby. Budovu vlastnila dcera Josefa Schrolla Johana se svým manželem, advokátem a zemským poslancem JUDr. Eduardem Langerem. Dr. Langer byl významným sběratelem, spisovatelem a badatelem v oblasti historie a etnografie příhraničních oblastí Českého království osídlených převážně německým obyvatelstvem. Jeho knihovna čítala přes 40 000 mnohdy vzácných svazků, další sbírky uměleckých předmětů naplnily dva velké sály běžně přístupné veřejnosti.
-trasa: trasa-a
+categories:
+  - Trasa A
 image: "../src/pages/pamatky/images/8.png"
 lang: cs
 ---
