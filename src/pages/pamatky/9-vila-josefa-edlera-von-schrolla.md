@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 9
 title: Vila Josefa Edlera von Schrolla čp. 239 – dnes Městský úřad Broumov
 slug: vila-josefa-edlera-von-schrolla
 excerpt: Klasicistní budova byla postavena roku 1853 na objednávku broumovského továrníka Josefa Schrolla a po své dostavbě sloužila jako jeho osobní palác. V roce 1884 zde došlo k výbuchu plynu, což mělo za následek renovaci a přechod k modernějšímu, elektrickému systému osvětlení. Elektrické osvětlení vily bylo napájeno elektřinou z vlastní elektrárny v nedaleké olivětínské továrně.
 trasa: trasa-a
-image: "/fotky/9.png"
+image: "../src/pages/pamatky/images/9.png"
 lang: cs
 ---
 

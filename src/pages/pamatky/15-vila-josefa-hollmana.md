@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 15
 title: Vila Josefa Hollmanna čp. 69 – dnes soukromý dům
 slug: vila-josefa-hollmana
 excerpt: Josef Hollmann se honosil na svých reklamních materiálech a hlavičkových obálkách přídomkem „největší a nejvýkonnější firma v oboru“. Firmu na výrobu žaluzií a rolet založil (stejně jako další výrobce Franz Merkel) v Broumově v roce 1905. Z roletářských firem, které vznikaly na Broumovsku již od konce 19. století, byla Hollmannova manufaktura skutečně zřejmě největší, zaměstnávala kolem třiceti lidí.
 trasa: trasa-a
-image: "/fotky/15.png"
+image: "../src/pages/pamatky/images/15.png"
 lang: cs
 ---
 

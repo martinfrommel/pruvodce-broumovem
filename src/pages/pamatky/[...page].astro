@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import Card from "../../components/Card.astro";
+
+export async function getStaticPaths({paginate}) {
+const allPamatky = await Astro.glob('./*.md');
+const sortedPamatky = allPamatky.sort((a,b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf());
+return paginate(sortedPamatky, {pageSize: 5});
+}
+
+const { page } = Astro.props;
+const title = "Památky"
+---
+<Layout title={title}>
+ <h1>Všechny památky</h1>
+ {page.data.map((pamatka) => (
+
+  <a href={pamatka.url}>{pamatka.title}</a>
+
+ ))}
+</Layout>
+
+<style>
+
+</style>

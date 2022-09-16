@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 16
 title: Dům sociální vybavenosti firmy Herman Pollack a synové čp 175 – dnes jídelna a MŠ Přadlácká
 slug: vila-socialni-vybavenosti-firmy-herman-pollack-a-synove
 excerpt: Secesí ovlivněná historizující budova sociální vybavenosti byla vystavěna firmou Hermann Pollack a synové naproti tovární bráně Pollackovy textilní továrny. Firma modernizovala a rozšířila továrnu zakoupenou od trutnovských bratří Etrichů, postavila dělnické domy a ve víceúčelovém objektu sociální vybavenosti provozovala jídelnu pro dělníky, školku pro děti svých zaměstnanců, lázně a další formy sociální a zdravotní péče.
 trasa: trasa-a
-image: "/fotky/16.png"
+image: "../src/pages/pamatky/images/16.png"
 lang: cs
 ---
 

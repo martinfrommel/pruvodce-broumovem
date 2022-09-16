@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 6
 title: Vila Cölestina Klemta čp. 248 – dnes budova Policie ČR
 slug: vila-colestina-klemta
 excerpt: Klemtova vila byla postavena na přelomu 19. a 20. století v historizujícím slohu. Pravděpodobným stavebníkem a jejím prvním vlastníkem byl Cölestin Klemt, obchodní ředitel firmy Schroll.
 trasa: trasa-a
-image: "/fotky/6.png"
+image: "../src/pages/pamatky/images/6.png"
 lang: cs
 ---
 

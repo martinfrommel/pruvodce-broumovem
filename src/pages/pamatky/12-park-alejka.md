@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 12
 title: Park Alejka
 slug: park-alejka
 excerpt: Park Alejka existuje v Broumově od počátku 19. století a své jméno získal díky jírovcové aleji lemující promenádu jeho horní části. Uprostřed mezi rameny schodiště bývala fontána a naproti schodišti stával pískovcový obelisk, od roku 1905 pomník F. L. Jahna, zakladatele spolku turnerů. Alejka se stala oblíbeným místem procházek a odpočinku, návštěvníkům nabízela klid ve stínu stromů i kouzelný výhled na pohoří Broumovské stěny.
 trasa: trasa-a
-image: "/fotky/12.png"
+image: "../src/pages/pamatky/images/12.png"
 lang: cs
 ---
 

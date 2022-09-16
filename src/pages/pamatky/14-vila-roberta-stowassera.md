@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 14
 title: Vila Roberta Stowassera čp. 67 – dnes soukromý dům
 slug: vila-roberta-stowassera
 excerpt: Jeden z mála secesních domů na Broumovsku stojí na rohu ulic Smetanova (dříve Friedhofstrasse) a Vančurova (Dientzenhoferstrasse). Býval jednou z nejhezčích ukázek moderní architektury počátku 20. století v Broumově. Původně zde stával klasicistní dům se zahradou a altánem v majetku rodiny Schultezových.
 trasa: trasa-a
-image: "/fotky/14.png"
+image: "../src/pages/pamatky/images/14.png"
 lang: cs
 ---
 

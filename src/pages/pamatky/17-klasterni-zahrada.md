@@ -1,10 +1,11 @@
 ---
+layout: ../../layouts/PamatkaSingleLayout.astro
 id: 17
 title: Klášterní zahrada
 slug: klasterni-zahrada
 excerpt: Velká klášterní zahrada byla založena za opata Tomáše Sartoria v roce 1676. Ještě v 17. století byl její nerovný terén upraven do teras a ohraničen zdí, byla zde postavena brána, kterou do zahrady ústila cesta vedoucí od Horní městské brány a obranný příkop překlenul nový kamenný most (místo požárem zničeného dřevěného).
 trasa: trasa-a
-image: "/fotky/17.png"
+image: "../src/pages/pamatky/images/17.png"
 lang: cs
 ---
 
@@ -13,6 +14,8 @@ Velká klášterní zahrada byla založena za opata Tomáše Sartoria v roce 167
 Známá rytina Antona Birkhardta evokuje dojem, že zahrada dostala v polovině 18. století podobu barokní francouzské okrasné zahrady s plochami stříhané zeleně odpovídající monumentální přestavbě klášterního objektu K. I. Dientzehoferem. Ústřední parter zahrady veduta zachycuje v geometrickém členění ornamentálními obrazci z brodérií a ploch trávníku. Zadní část tvořily aleje pergol, keřů a stromů stříhaných do stěn a tvarovaných podloubí. Otázkou však je, zda se nejednalo pouze o barokní idealizaci, neboť zahrada sloužila benediktinskému řádu především jako záhony pro zeleninu a byliny, část byla ovocným sadem a část využívali mniši pro rozjímání.
 
 Na zahradě vyrostlo několik staveb, které sloužily například jako zázemí pro zahradníka, sklady, kůlny. Dále tu můžeme najít pozdně barokní pískovcovou kašnu, repliku dřevěného kuželníku, kamenné terasy a schodiště, sochu sv. Josefa, skleník, pylon či cihlovou věž vodojemu.
+
+![Klášterní Zahrada - Pohled z klášterní brány] (./images/17.1.png)
 
 Od konce 19. století a v průběhu první poloviny 20. století zahrada postupně ztrácela svůj kulturní charakter a chátrala. Od 50. let 20. století byla využívána pro potřeby Charitního ústavu pro řeholnice. Řeholní sestry zde pěstovaly zeleninu a květiny.
 
