@@ -1,13 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { generateCategoryData } from "../utils/helpers.js";
 import Card from "../components/Card.astro";
 
-
-const { frontmatter } = Astro.props;
-
-const allCategoriesData = generateCategoryData(frontmatter.categories);
-console.log(allCategoriesData);
+const { page, frontmatter } = Astro.props;
 ---
 <Layout title={frontmatter.title}>
 
@@ -21,6 +16,7 @@ console.log(allCategoriesData);
           <h1 class="lg:leading-loose leading-relaxed mb-3">{frontmatter.id}. {frontmatter.title}</h1>
           <slot />
         </article>
+        <a class="btn my-3 w-full text-center" href=`/#${frontmatter.trasa}`>Zpět</a>
       </Card>
     </section>
   </div>

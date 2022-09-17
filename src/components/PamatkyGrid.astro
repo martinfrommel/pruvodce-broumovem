@@ -1,30 +1,56 @@
 ---
-const pamatky = (await Astro.glob('../pages/pamatky/*.md')).sort(
+
+const trasaA = (await Astro.glob('../pages/pamatky/trasa-a/*.md')).sort(
+    (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
+    );
+
+const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
     (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
     );
 
 ---
 
-<section id="pamatky" class="z-10">
-<ul class="flex flex-wrap flex-auto items-stretch justify-evenly">
-  { pamatky.map(pamatka =>(
-    <li id={pamatka.frontmatter.id} class="flex items-center justify-center md:flex-row flex-col-reverse flex-nowrap md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-5 rounded-md md:items-start md:justify-start flex-auto lg:basis-1/3 md:text-justify m-3">
-      {pamatka.frontmatter.image &&
-        <img class="md:max-w-[40%] place-self-center" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
-      }
-        <div class="flex flex-col flex-wrap justify-start items-start">
-          <a href={pamatka.url}>
-            <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
-          </a>
-          <hr />
-          <p>{pamatka.frontmatter.excerpt}</p>
-          <a class="p-3 bg-quarternary text-secondary md:mt-3 rounded-md hover:scale-105 transition-all ease-in-out my-3 md:my-0" href={pamatka.url}>Zobrazit památku</a>
-          </div>
-      </li>
+<section x-cloak x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : '' }" id="pamatky-grid" class="z-10 min-w-full h-fit p-1 sm:p-3">
+    <nav class="flex flex-row justify-center items-center space-x-5">
+      <button class="btn w-full h-fit" @click.prevent="tab = 'trasa-a'; window.location.hash = 'trasa-a';" href="#">Trasa A</a>
+      <button class="btn w-full h-fit" @click.prevent="tab = 'trasa-b'; window.location.hash = 'trasa-b';" href="#">Trasa B</a>
+    </nav>
 
-  ))}
-</ul>
-
+        <ul x-show="tab === 'trasa-a'" id="pamatky-trasa-a" class="flex flex-wrap flex-auto items-stretch justify-evenly" x-transition:enter.delay.500ms.duration.500ms x-transition:leave.duration.200ms>
+          { trasaA.map(pamatka =>(
+            <li id=`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}` class="flex items-center justify-center md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-5 rounded-md md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3">
+              {pamatka.frontmatter.image &&
+                <img class="md:max-w-[40%] place-self-center sm:landscape:max-w-[30%]" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
+              }
+                <div class="flex flex-col flex-wrap justify-start items-start">
+                  <a href={pamatka.url}>
+                    <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
+                  </a>
+                  <hr />
+                  <p>{pamatka.frontmatter.excerpt}</p>
+                  <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
+                  </div>
+              </li>
+          ))}
+        </ul>
+        <ul x-show="tab === 'trasa-b'" id="pamatky-trasa-b" class="flex flex-wrap flex-auto items-stretch justify-evenly" x-transition:enter.delay.500ms.duration.500ms x-transition:leave.duration.200ms>
+          { trasaB.map(pamatka =>(
+            <li id=`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}` class="flex items-center justify-center md:flex-row flex-col-reverse flex-nowrap md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-5 rounded-md md:items-start md:justify-start flex-auto lg:basis-1/3 md:text-justify m-3">
+              {pamatka.frontmatter.image &&
+                <img class="md:max-w-[40%] place-self-center" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
+              }
+                <div class="flex flex-col flex-wrap justify-start items-start">
+                  <a href={pamatka.url}>
+                    <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
+                  </a>
+                  <hr />
+                  <p>{pamatka.frontmatter.excerpt}</p>
+                  <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
+                  </div>
+                  </li>
+          ))}
+        </ul>
+      </div>
 </section>
 
 <style>

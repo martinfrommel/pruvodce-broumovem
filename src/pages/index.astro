@@ -4,6 +4,7 @@ import Card from '../components/Card.astro';
 import PamatkyGrid from '../components/PamatkyGrid.astro';
 
 import indexblobs from '../assets/bg/index/indexBlobs.svg';
+import { Picture } from '@astrojs/image/components';
 ---
 
 <Layout title="Průvodce Broumovem">
@@ -14,7 +15,7 @@ import indexblobs from '../assets/bg/index/indexBlobs.svg';
       <p>
       <span class="text-secondary tracking-wide font-light text-2xl">Přijměte pozvánku na</span>
       <br/>
-      <span class="tracking-widest leading-relaxed font-bold uppercase">procházku Broumovem</span>
+      <span class="tracking-widest leading-relaxed font-bold uppercase text-quarternary">procházku Broumovem</span>
       <br/>
       <span class="text-secondary tracking-wide font-light text-2xl">s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století</span>
     </p>
@@ -31,7 +32,7 @@ import indexblobs from '../assets/bg/index/indexBlobs.svg';
   </section>
 
   <section class="flex-auto basis-1/6 -z-10" >
-    <img class="w-full h-full" src={indexblobs} />
+    <Picture  src="../src/assets/img/indexBlobs.png" widths={[400, 500, 600]} aspectRatio={"1143:1255"} alt="" sizes="(max-width: 100%)" formats={['webp', 'avif', 'png']} />
   </section>
 </div>
 
