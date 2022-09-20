@@ -2,20 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import PamatkyGrid from '../components/PamatkyGrid.astro';
-
-import indexblobs from '../assets/bg/index/indexBlobs.svg';
+import IndexBlobs from '../assets/img/indexBlobs.png'
 import { Picture } from '@astrojs/image/components';
+
+const description = "Přijmete pozvánku na procházku Broumovem s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století."
 ---
 
-<Layout title="Průvodce Broumovem">
+<Layout title="Průvodce Broumovem" description={description}>
 
-<div id="container" class="flex flex-col space-y-10 lg:flex-row lg:space-x-10 items-center justify-evenly">
+<div id="container" class="flex flex-col space-y-10 lg:flex-row lg:space-x-10 items-center justify-evenly linky-bg">
   <section id="welcome" class="flex basis-6/12 flex-col flex-auto flex-wrap lg:text-justify bg-secondary/10 p-5 rounded-md">
     <h1>
       <p>
       <span class="text-secondary tracking-wide font-light text-2xl">Přijměte pozvánku na</span>
       <br/>
-      <span class="tracking-widest leading-relaxed font-bold uppercase text-quarternary">procházku Broumovem</span>
+      <span class="tracking-widest leading-relaxed font-bold uppercase text-quarternary-500">procházku Broumovem</span>
       <br/>
       <span class="text-secondary tracking-wide font-light text-2xl">s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století</span>
     </p>
@@ -32,7 +33,7 @@ import { Picture } from '@astrojs/image/components';
   </section>
 
   <section class="flex-auto basis-1/6 -z-10" >
-    <Picture  src="../src/assets/img/indexBlobs.png" widths={[400, 500, 600]} aspectRatio={"1143:1255"} alt="" sizes="(max-width: 100%)" formats={['webp', 'avif', 'png']} />
+    <Picture  src={IndexBlobs} widths={[400, 500, 600]} aspectRatio={"1143:1255"} alt="" sizes="(max-width: 100%)" formats={['webp', 'avif', 'png']} />
   </section>
 </div>
 

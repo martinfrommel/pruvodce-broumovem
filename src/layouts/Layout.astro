@@ -1,18 +1,19 @@
 ---
 export interface Props {
 	title: string;
+  description: string;
 }
 
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="cs" class="min-h-screen min-w-screen">
-  <BaseHead title={title}/>
+  <BaseHead title={title} description={description} />
 	<body class="h-full flex flex-wrap justify-between bg-primary text-secondary">
     <Header />
     <main id="content" class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full">
@@ -24,17 +25,20 @@ const { title } = Astro.props;
 	</body>
 </html>
 
+<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 <style is:global>
   @import url("https://use.typekit.net/csa2fon.css");
 
 html {
   font-family: 'Lato';
   font-weight: 400;
-  scroll-behavior: smooth;
+  @apply scroll-smooth motion-reduce:scroll-auto;
 }
 
 body {
-  background: center / cover border-box no-repeat url(../assets/img/linky-bg.svg);
+  background: center / cover border-box no-repeat url(../../src/assets/svg/bodyBgLines.svg);
   background-attachment: fixed;
 }
 
@@ -64,6 +68,11 @@ p {
 }
 
 .btn {
-  @apply py-3 px-5 bg-quarternary text-white font-bold hover:bg-quarternary/90 rounded-md transition-all ease-in-out
+  @apply py-3 px-5 bg-quarternary-500 text-white font-bold hover:bg-quarternary-600 rounded-md transition-all ease-out;
+}
+
+.card {
+  @apply flex flex-col flex-wrap bg-primary/95 ring-tertiary ring-8 p-5 rounded-md items-start justify-start flex-auto text-justify -z-20;
 }
 </style>
+

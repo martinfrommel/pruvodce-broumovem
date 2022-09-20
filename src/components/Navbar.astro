@@ -4,12 +4,15 @@ const currentPath = pathname.slice(1);
 ---
 
 <nav id="menu" class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0">
-    <a class={currentPath === "" ? "active " : "inactive"} href="/">Domů</a>
-    <a class={currentPath === "o-projektu" ? "active " : "inactive"} href="/o-projektu">O projektu</a>
-    <a class={currentPath === "partneri" ? "active " : "inactive"} href="/partneri">Partneři</a>
+    <a class={currentPath === "" ? "active " : "inactive"} href="/" rel="prefetch">Domů</a>
+    <a class={currentPath === "o-projektu" ? "active " : "inactive"} href="/o-projektu" rel="prefetch">O projektu</a>
+    <a class={currentPath === "partneri" ? "active " : "inactive"} href="/partneri" rel="prefetch">Partneři</a>
 </nav>
 
 <style>
+  #menu a {
+    @apply font-bold;
+  }
   .inactive {
     @apply  transition-all ease-bounce;
 		border-bottom-width: 0;

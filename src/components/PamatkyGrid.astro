@@ -1,4 +1,5 @@
 ---
+import BlobSingle from "./BlobSingle.astro";
 
 const trasaA = (await Astro.glob('../pages/pamatky/trasa-a/*.md')).sort(
     (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
@@ -10,47 +11,53 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
 
 ---
 
-<section x-cloak x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : '' }" id="pamatky-grid" class="z-10 min-w-full h-fit p-1 sm:p-3">
+<!-- Main Wrapper -->
+<section x-data="{ trasa: $persist('').using(sessionStorage) }" id="pamatky-grid" class="z-10 min-w-full h-fit p-1 sm:p-3">
+  <!-- Toggle Trasa -->
     <nav class="flex flex-row justify-center items-center space-x-5">
-      <button class="btn w-full h-fit" @click.prevent="tab = 'trasa-a'; window.location.hash = 'trasa-a';" href="#">Trasa A</a>
-      <button class="btn w-full h-fit" @click.prevent="tab = 'trasa-b'; window.location.hash = 'trasa-b';" href="#">Trasa B</a>
+      <button x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
+      <button x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
     </nav>
-
-        <ul x-show="tab === 'trasa-a'" id="pamatky-trasa-a" class="flex flex-wrap flex-auto items-stretch justify-evenly" x-transition:enter.delay.500ms.duration.500ms x-transition:leave.duration.200ms>
-          { trasaA.map(pamatka =>(
-            <li id=`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}` class="flex items-center justify-center md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-5 rounded-md md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3">
+        <!-- Trasa A List -->
+          <ul x-cloak x-show="trasa === 'Trasa A'"  class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
+          {trasaA.map(pamatka =>(
+            <li id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex bg-secondary text-[#313131] items-start justify-evenly md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
+              <div id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
+                <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
+              </div>
               {pamatka.frontmatter.image &&
-                <img class="md:max-w-[40%] place-self-center sm:landscape:max-w-[30%]" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
-              }
+                <img class="md:max-w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
                   <a href={pamatka.url}>
-                    <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
+                    <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm">{pamatka.frontmatter.title}</h3>
                   </a>
                   <hr />
                   <p>{pamatka.frontmatter.excerpt}</p>
                   <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
-                  </div>
-              </li>
+                </div>
+             </li>
           ))}
         </ul>
-        <ul x-show="tab === 'trasa-b'" id="pamatky-trasa-b" class="flex flex-wrap flex-auto items-stretch justify-evenly" x-transition:enter.delay.500ms.duration.500ms x-transition:leave.duration.200ms>
-          { trasaB.map(pamatka =>(
-            <li id=`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}` class="flex items-center justify-center md:flex-row flex-col-reverse flex-nowrap md:space-x-7 md:space-y-0 bg-tertiary/25 px-3 md:px-7 py-5 rounded-md md:items-start md:justify-start flex-auto lg:basis-1/3 md:text-justify m-3">
+        <!-- Trasa B List -->
+        <ul x-cloak x-show="trasa === 'Trasa B'" class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
+          {trasaB.map(pamatka =>(
+            <li id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex items-start justify-evenly bg-secondary text-[#313131] md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
+              <div id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
+                <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
+              </div>
               {pamatka.frontmatter.image &&
-                <img class="md:max-w-[40%] place-self-center" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} />
-              }
+                <img class="md:max-w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={pamatka.frontmatter.image} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
                   <a href={pamatka.url}>
-                    <h3 class="">{pamatka.frontmatter.id}. {pamatka.frontmatter.title}</h3>
+                    <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm"><span class="text-3xl md:hidden">{pamatka.frontmatter.id}.</span> {pamatka.frontmatter.title}</h3>
                   </a>
                   <hr />
                   <p>{pamatka.frontmatter.excerpt}</p>
                   <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
-                  </div>
-                  </li>
+                </div>
+             </li>
           ))}
         </ul>
-      </div>
 </section>
 
 <style>
@@ -59,6 +66,15 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
   }
 
   h3 {
-    @apply leading-tight text-lg mb-3
+    @apply leading-tight text-lg mb-3 ;
   }
+
+  .activeTab {
+    @apply bg-quarternary-700 hover:bg-quarternary-700;
+  }
+
+  .activeTab:active {
+    animation: animate__shake;
+  }
+
 </style>

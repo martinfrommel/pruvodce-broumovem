@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/PamatkaSingleLayout.astro
-id: 7
+id: 2
 title: Vila Josefa Dimtera čp. 245 – dnes Dům dětí a mládeže Ulita Broumov
 excerpt: Vilu nechal postavit JUDr. Josef Dimter v letech 1883­-85 a je jednou z mála zachovaných broumovských novorenesančních staveb. Jako jediná budova na Broumovsku je na hlavním průčelí fasády zdobena náročnou sgrafitovou výzdobou, která doplňuje celkovou palladiánskou kompozici tohoto průčelí.  Není bohužel známo, který architekt tuto vilu navrhl.
-trasa: trasa-b
+trasa: trasa-a
 image: "../../src/pages/pamatky/images/7.png"
 lang: cs
 ---
