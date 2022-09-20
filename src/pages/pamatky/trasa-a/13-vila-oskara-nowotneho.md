@@ -4,7 +4,7 @@ id: 13
 title: Vila Oskara Nowotného čp 127 – dnes Hotel VEBA
 excerpt: Vila byla postavena na přelomu let 1927-1928 podle návrhu brněnského architekta německé národnosti Henricha Fanty. Broumovský průmyslník a majitel barevny Oskar Nowotný nechal vilu vybudovat jako okázalé rodinné sídlo působící dojmem venkovského zámečku z období přelomu baroka a klasicismu.
 trasa: trasa-a
-image: "../../src/pages/pamatky/images/13.png"
+image: "./images/13.png"
 lang: cs
 ---
 

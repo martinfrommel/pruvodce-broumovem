@@ -8,10 +8,10 @@ const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto par
 <Layout title="Partneři" description={description}>
   <div class="flex flex-col flex-auto space-y-32">
 <section id="logos" class="flex flex-row flex-auto space-x-7 justify-center items-center">
-  <Picture src="../../src/assets/img/partneri/irpLogo.png" alt="Institut Reigonální Paměti, z.ú." widths={[216]} heights={[112]} aspectRatio="16:8" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} />
-  <Picture src="../../src/assets/img/partneri/broumovLogo.png" alt="Město Brumov" widths={[132]} heights={[148]} aspectRatio="1:1" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} />
-  <Picture src="../../src/assets/img/partneri/euLogo.png" alt="Pod záštitou EU" widths={[273]} heights={[77]} aspectRatio="39:11" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} background="#fff"/>
-  <Picture src="../../src/assets/img/partneri/ulitaLogo.png" alt="DDM Ulita Broumov" widths={[150, 200]} aspectRatio="301:208" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} background="#fff"/>
+  <Picture src={import ("../assets/img/partneri/irpLogo.png")} alt="Institut Reigonální Paměti, z.ú." widths={[216]} heights={[112]} aspectRatio="16:8" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} />
+  <Picture src={import ("../assets/img/partneri/broumovLogo.png")} alt="Město Brumov" widths={[132]} heights={[148]} aspectRatio="1:1" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} />
+  <Picture src={import ("../assets/img/partneri/euLogo.png")} alt="Pod záštitou EU" widths={[273]} heights={[77]} aspectRatio="39:11" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} background="#fff"/>
+  <Picture src={import ("../assets/img/partneri/ulitaLogo.png")} alt="DDM Ulita Broumov" widths={[150, 200]} aspectRatio="301:208" sizes="(max-width:30%)" formats={['avif', 'webp', 'png']} background="#fff"/>
 </section>
 <section id="podekovani" class="flex flex-col flex-auto justify-center items-center">
   <h1 class="text-6xl">Děkujeme!</h1>

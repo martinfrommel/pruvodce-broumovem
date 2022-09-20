@@ -4,7 +4,7 @@ id: 1
 title: Vila Benedikta Schrolla čp. 233 – dnes Mateřská škola Broumov
 excerpt: Dnešní mateřskou školu, dříve Schrollovu vilu, nechal postavit roku 1840 Benedikt Schroll jako centrální sklad a obchod s plátnem. Po jeho smrti dům převzal Josef Schroll. V roce 1945 bylo okresní správní komisí rozhodnuto, že v budově bude sídlo okresního muzea. Novým ředitelem instituce se stal Oto Ronge, který měl za úkol zajišťování a uskladňování muzejních předmětů po odsunutých broumovských Němcích. Samotné muzeum zde působilo do roku 1956, od té doby je budova využívána jako mateřská škola.
 trasa: trasa-a
-image: "../../src/pages/pamatky/images/1.png"
+image: "./images/1.png"
 lang: cs
 ---
 
