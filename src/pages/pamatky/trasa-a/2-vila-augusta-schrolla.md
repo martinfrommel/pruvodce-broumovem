@@ -4,7 +4,7 @@ id: 2
 title: Vila Augusta Schrolla čp. 232 – dnes bytový dům
 excerpt: Schrollova vila čp. 232 je bývalou lesní správou, dnes bytovým domem v majetku soukromníka. Byla postavena v roce 1833 Augustem Schrollem, starším bratrem Josefa Schrolla a synem obchodníka Benedikta Schrolla.
 trasa: trasa-a
-image: "../assets/img/pamatky/2.png"
+image: "2"
 lang: cs
 ---
 
