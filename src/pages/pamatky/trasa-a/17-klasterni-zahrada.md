@@ -4,7 +4,7 @@ id: 17
 title: Klášterní zahrada
 excerpt: Velká klášterní zahrada byla založena za opata Tomáše Sartoria v roce 1676. Ještě v 17. století byl její nerovný terén upraven do teras a ohraničen zdí, byla zde postavena brána, kterou do zahrady ústila cesta vedoucí od Horní městské brány a obranný příkop překlenul nový kamenný most (místo požárem zničeného dřevěného).
 trasa: trasa-a
-image: "./images/17.png"
+image: "../assets/img/pamatky/17.png"
 lang: cs
 ---
 

@@ -4,7 +4,7 @@ id: 18
 title: Kaiserstrasse – Masarykova ulice
 excerpt: Dnešní Masarykova třída, hlavní přístupová cesta do Broumova z polické strany, vystřídala mnoho názvů – Císařská ulice (Kaiserstrasse), Trutnovská (Trautenauerstrasse), Konrad-Henlein-strasse, Fučíkova třída.
 trasa: trasa-a
-image: "./images/18.png"
+image: "../assets/img/pamatky/18.png"
 lang: cs
 ---
 

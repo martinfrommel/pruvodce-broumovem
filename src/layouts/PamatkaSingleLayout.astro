@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import BlobSingle from "../components/BlobSingle.astro";
+import { Image } from "@astrojs/image/components";
 
 const { page, frontmatter } = Astro.props;
 ---
@@ -24,7 +25,7 @@ const { page, frontmatter } = Astro.props;
         <a class="btn my-7 md:mt-10 w-full text-center z-auto hidden md:block" href={`/#${frontmatter.trasa}-${frontmatter.id}`}>Zpět</a>
       </div>
       {frontmatter.image &&
-        <img class="md:max-h-[700px] md:mr-5 mt-3 md:mt-0 flex-auto rounded-sm md:px-5 md:place-self-center" src={frontmatter.image} alt={frontmatter.title} />
+        <Image class="md:max-h-[700px] md:mr-5 mt-3 md:mt-0 flex-auto rounded-sm md:px-5 md:place-self-center" src={import (`${frontmatter.image}`)} alt={frontmatter.title} />
         }
     <a class="btn my-7 md:mt-10 w-full text-center z-auto md:hidden" href={`/#${frontmatter.trasa}-${frontmatter.id}`}>Zpět</a>
     </section>

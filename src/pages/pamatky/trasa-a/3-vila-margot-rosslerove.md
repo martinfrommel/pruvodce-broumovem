@@ -4,7 +4,7 @@ id: 3
 title: Vila Margot Rösslerové čp. 246 – dnes Dětský domov Broumov
 excerpt: Čtyřpodlažní budova byla postavena okolo roku 1880 jako činžovní dům. V roce 1934 byla přestavěna architektem Heinrichem Fantou jako vila Margot Rösslerové, proto se pro dům vžilo u místních obyvatel pojmenování vila Margot. Margot Rösslerová byla vnučkou Franze Moritze Rösslera (Rosera) (1818­­-1906) lékaře a politika německého původu, který byl v 2. polovině 19. stol. poslancem Českého zemského sněmu a Říšské rady.
 trasa: trasa-a
-image: "./images/3.png"
+image: "../assets/img/pamatky/3.png"
 lang: cs
 ---
 

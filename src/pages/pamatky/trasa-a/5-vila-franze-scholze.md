@@ -4,7 +4,7 @@ id: 5
 title: Vila Franze Scholze čp. 247 – dnes bytový dům
 excerpt: Vila Scholz, další z výrazných objektů Masarykovy třídy, stojí na rohu ulice K Ráji a zřejmě i pro svou původní střídmost se dočkala během let jen mála závažných estetických změn. V nenávratnu bohužel zmizel dřevěný řezbou zdobený altán tolik typický i pro další broumovské zahrady.
 trasa: trasa-a
-image: "./images/5.png"
+image: "../assets/img/pamatky/5.png"
 lang: cs
 ---
 

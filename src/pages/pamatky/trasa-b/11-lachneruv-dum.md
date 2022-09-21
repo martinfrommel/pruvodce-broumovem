@@ -4,7 +4,7 @@ id: 6
 title: Lachnerův dům
 excerpt: Zahradní domek s mansardovou střechou a pavlačí, jenž stával ve svahu pod farním kostelem sv. Petra a Pavla, patřil k nejzajímavějším dřevěným lidovým stavbám na Broumovsku.
 trasa: trasa-b
-image: "./images/11"
+image: "../assets/img/pamatky/11.png"
 lang: cs
 ---
 

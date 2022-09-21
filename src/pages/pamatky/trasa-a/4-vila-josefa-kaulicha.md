@@ -4,7 +4,7 @@ id: 4
 title: Vila Josefa Kaulicha čp. 249 – dnes Klub ROK
 excerpt: Vila Kaulich byla postavena na přelomu 19. a 20. století. Jejím jediným dohledaným vlastníkem a pravděpodobným stavebníkem byl Josef Kaulich, prokurista firmy Schroll. Do 2. světové války byla tato vila jednou z dominant Císařské ulice. Další z exkluzivních staveb byla postavena ve vkusné směsici stylů shrnovaných do označení historismus.
 trasa: trasa-a
-image: "./images/4.png"
+image: "../assets/img/pamatky/4.png"
 lang: cs
 ---
 
