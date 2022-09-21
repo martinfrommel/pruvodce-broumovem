@@ -16,8 +16,8 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
 <section x-data="{ trasa: $persist('').using(sessionStorage) }" id="pamatky-grid" class="z-10 min-w-full h-fit p-1 sm:p-3">
   <!-- Toggle Trasa -->
     <nav class="flex flex-row justify-center items-center space-x-5">
-      <button aria-label="Zvolit trasu A" x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
-      <button aria-label="Zvolit trasu B" x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
+      <button aria-label="Zvolit trasu A" class="text-tertiary" x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
+      <button aria-label="Zvolit trasu B" class="text-tertiary" x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
     </nav>
         <!-- Trasa A List -->
           <ul aria-label="Seznam památek v trase A" x-show="trasa === 'Trasa A'"  class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
