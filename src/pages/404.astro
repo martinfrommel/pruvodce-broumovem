@@ -1,14 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 
 const description = "404 - Stránka Nenalezena"
 ---
 
 <Layout title="Průvodce Broumovem" description={description}>
-
-<h1>404</h1>
-<p>Stránka nenalezena</p>
-
+<div class="container flex flex-col justify-center items-center text-center space-y-2">
+<h1 class="text-6xl font-bold">404</h1>
+<p class="font-bold">Stránka nenalezena</p>
+</div>
 </Layout>
 
