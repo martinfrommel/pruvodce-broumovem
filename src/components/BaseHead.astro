@@ -1,5 +1,4 @@
 ---
-import metaImg from '../../public/metaImg.png';
 export interface Props {
   title: string,
   description: string,
@@ -30,7 +29,7 @@ const {title, description} = Astro.props;
   <meta name="twitter:title" content="Průvodce Broumovem">
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
   <meta name="og:title" content="Průvodce Broumovem">
-  <meta name="og:image" content={metaImg}>
+  <meta name="og:image" content="/metaImg.png">
   <meta name="og:locale" content="cs_CZ">
   <meta name="og:type" content="website">
   <title>{title}</title>
