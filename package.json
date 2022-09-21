@@ -14,20 +14,14 @@
     "@astrojs/mdx": "^0.11.1",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/svelte": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/turbolinks": "^0.1.4",
     "@types/alpinejs": "^3.7.0",
     "astro": "^1.2.1",
-    "autoprefixer": "^10.4.9",
-    "svelte": "^3.50.1"
+    "autoprefixer": "^10.4.9"
   },
   "devDependencies": {
-    "@swup/a11y-plugin": "^2.1.0",
-    "@swup/head-plugin": "^1.2.1",
-    "@swup/slide-theme": "^1.0.5",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.4",
-    "swup": "^2.0.19"
+    "prettier-plugin-astro": "^0.5.4"
   }
 }
