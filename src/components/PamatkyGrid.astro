@@ -27,7 +27,7 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
                 <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
               </div>
               {pamatka.frontmatter.image &&
-                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} width={500} format={['webp']} /> }
+                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
                   <a href={pamatka.url}>
                     <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm">{pamatka.frontmatter.title}</h3>
@@ -47,7 +47,7 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
                 <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
               </div>
               {pamatka.frontmatter.image &&
-                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} width={500} format={['webp']} /> }
+                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
                   <a href={pamatka.url}>
                     <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm"><span class="text-3xl md:hidden">{pamatka.frontmatter.id}.</span> {pamatka.frontmatter.title}</h3>
