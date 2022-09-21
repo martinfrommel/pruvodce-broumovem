@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<nav id="menu" class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0">
+<nav aria-label="Navigační menu" id="menu" class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0">
     <a class={currentPath === "" ? "active " : "inactive"} href="/" rel="prefetch">Domů</a>
     <a class={currentPath === "o-projektu" ? "active " : "inactive"} href="/o-projektu" rel="prefetch">O projektu</a>
     <a class={currentPath === "partneri" ? "active " : "inactive"} href="/partneri" rel="prefetch">Partneři</a>

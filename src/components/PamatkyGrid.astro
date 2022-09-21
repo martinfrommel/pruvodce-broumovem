@@ -16,45 +16,45 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
 <section x-data="{ trasa: $persist('').using(sessionStorage) }" id="pamatky-grid" class="z-10 min-w-full h-fit p-1 sm:p-3">
   <!-- Toggle Trasa -->
     <nav class="flex flex-row justify-center items-center space-x-5">
-      <button x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
-      <button x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
+      <button aria-label="Zvolit trasu A" x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
+      <button aria-label="Zvolit trasu B" x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
     </nav>
         <!-- Trasa A List -->
-          <ul x-cloak x-show="trasa === 'Trasa A'"  class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
+          <ul aria-label="Seznam památek v trase A" x-show="trasa === 'Trasa A'"  class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
           {trasaA.map(pamatka =>(
-            <li id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex bg-secondary text-[#313131] items-start justify-evenly md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
-              <div id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
+            <li aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`} id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex bg-secondary text-[#313131] items-start justify-evenly md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
+              <div aria-hidden="true" id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
                 <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
               </div>
               {pamatka.frontmatter.image &&
-                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
+                <Image aria-hidden={"true"} class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
-                  <a href={pamatka.url}>
+                  <a aria-hidden="true" href={pamatka.url} rel="prefetch">
                     <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm">{pamatka.frontmatter.title}</h3>
                   </a>
                   <hr />
-                  <p>{pamatka.frontmatter.excerpt}</p>
-                  <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
+                  <p aria-hidden="true">{pamatka.frontmatter.excerpt}</p>
+                  <a class="btn my-3" href={pamatka.url} rel="prefetch">Zobrazit památku</a>
                 </div>
              </li>
           ))}
         </ul>
         <!-- Trasa B List -->
-         <ul x-cloak x-show="trasa === 'Trasa B'" class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
+         <ul aria-label="Seznam památek v trase B" x-show="trasa === 'Trasa B'" class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
           {trasaB.map(pamatka =>(
-            <li id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex items-start justify-evenly bg-secondary text-[#313131] md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
-              <div id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
+            <li aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`} id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex items-start justify-evenly bg-secondary text-[#313131] md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-3 md:px-7 py-3 rounded-sm md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
+              <div aria-hidden="true" id="idBlob" class="hidden md:block md:absolute md:scale-[30%] md:-translate-y-[40%] md:-translate-x-[45%] -rotate-12 z-50">
                 <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
               </div>
               {pamatka.frontmatter.image &&
-                <Image class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
+                <Image aria-hidden={"true"} class="md:w-[50%] place-self-center sm:landscape:max-w-[30%] rounded-sm" src={import (`../assets/img/pamatky/${pamatka.frontmatter.image}.webp`)} alt={pamatka.frontmatter.title} /> }
                 <div class="flex flex-col flex-wrap justify-start items-start">
-                  <a href={pamatka.url}>
+                  <a aria-hidden="true" href={pamatka.url} rel="prefetch">
                     <h3 class="font-bold text-primary bg-tertiary px-4 py-3 leading-relaxed text-left rounded-sm"><span class="text-3xl md:hidden">{pamatka.frontmatter.id}.</span> {pamatka.frontmatter.title}</h3>
                   </a>
                   <hr />
-                  <p>{pamatka.frontmatter.excerpt}</p>
-                  <a class="btn my-3" href={pamatka.url}>Zobrazit památku</a>
+                  <p aria-hidden="true">{pamatka.frontmatter.excerpt}</p>
+                  <a class="btn my-3" href={pamatka.url} rel="prefetch">Zobrazit památku</a>
                 </div>
              </li>
           ))}
