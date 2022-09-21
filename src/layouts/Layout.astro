@@ -14,7 +14,7 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="cs" class="min-h-screen min-w-screen">
   <BaseHead title={title} description={description} />
-	<body class="h-full flex flex-wrap justify-between bg-primary text-secondary">
+	<body class="min-h-full w-full flex flex-wrap bg-primary text-secondary">
     <Header />
     <main id="content" class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full">
       <slot>
@@ -73,7 +73,7 @@ p {
 }
 
 .card {
-  @apply flex flex-col flex-wrap bg-primary/95 ring-tertiary ring-8 p-5 rounded-md items-start justify-start flex-auto text-justify -z-20;
+  @apply flex flex-col flex-wrap p-5 rounded-sm flex-auto text-justify;
 }
 </style>
 
