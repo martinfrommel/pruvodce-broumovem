@@ -16,7 +16,7 @@ const { title, description } = Astro.props;
   <BaseHead title={title} description={description} />
 	<body class="h-full flex flex-wrap justify-between bg-primary text-secondary">
     <Header />
-    <main id="content" class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full">
+    <main id="swup" class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full transition-fade">
       <slot>
         <h1 class="justify-self-center">Zatím tu nic není!</h1>
       </slot>
@@ -27,6 +27,8 @@ const { title, description } = Astro.props;
 
 <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script type="module" src="/app.js"></script>
+
 
 <style is:global>
   @import url("https://use.typekit.net/csa2fon.css");

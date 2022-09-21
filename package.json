@@ -23,7 +23,11 @@
     "svelte": "^3.50.1"
   },
   "devDependencies": {
+    "@swup/a11y-plugin": "^2.1.0",
+    "@swup/head-plugin": "^1.2.1",
+    "@swup/slide-theme": "^1.0.5",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.4"
+    "prettier-plugin-astro": "^0.5.4",
+    "swup": "^2.0.19"
   }
 }
