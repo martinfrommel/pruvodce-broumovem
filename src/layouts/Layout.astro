@@ -35,7 +35,7 @@ const { title, description } = Astro.props;
 html {
   font-family: 'lato'!important;
   font-weight: 400;
-  @apply scroll-smooth motion-reduce:scroll-auto transition-all ease-in-out;
+  @apply selection:bg-primary selection:text-secondary scroll-smooth motion-reduce:scroll-auto transition-all ease-in-out;
 }
 
 body {
@@ -72,8 +72,5 @@ p {
   @apply py-3 px-5 bg-quarternary-500 text-white font-bold hover:bg-quarternary-600 rounded-md transition-all ease-out;
 }
 
-.card {
-  @apply flex flex-col flex-wrap p-5 rounded-sm flex-auto text-justify;
-}
 </style>
 

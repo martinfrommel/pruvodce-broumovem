@@ -6,15 +6,20 @@ import { Image } from '@astrojs/image/components';
 const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto partnerů. Děkujeme!`;
 ---
 <Layout title="Partneři" description={description}>
-<Card className="bg-secondary justify-center overflow-hidden md:h-[35rem]">
-  <div class="text-primary text-4xl my-3 text-center font-bold">
-    Za podporu děkujeme!
+<Card className="bg-secondary overflow-hidden md:space-y-10 px-3 md:px-24 pt-7 pb-12 ">
+  <div class="text-primary text-3xl md:text-4xl my-3 text-center font-bold">
+    Za podporu děkujeme:
   </div>
-<div class="flex flex-col md:flex-row md:space-x-4 space-y-10 justify-evenly items-center md:my-3 my-7 px-4 md:px-0 z-50">
-  <a aria-label="DDM Ulita Broumov" href="https://ulita.org" target="_blank"><Image aria-hidden={"true"} class="w-[150px] md:w-[200px] h-auto max-w-full" src={import("../assets/img/partneri/ulitaLogo.png")} alt="DDM Ulita Broumov" format={"webp"} /></a>
-  <Image aria-hidden={"true"} class="w-[350px] md:w-[370px] h-auto max-w-full" src={import("../assets/img/partneri/euLogo.png")} alt="Za podpory Evropské Unie" format={"webp"} />
-  <a aria-label="Insititut Regionální Paměti, z.ú." href="https://broumovsko.org" target="_blank"><Image aria-hidden={"true"} class="w-[150px] md:w-[200px] h-auto max-w-full" src={import("../assets/img/partneri/irpLogo.png")} alt="Insititut Regionální Paměti, z.ú." format={"webp"} /></a>
-  <a aria-label="Město Broumov" href="https://broumov-mesto.cz" target="_blank"><Image aria-hidden={"true"} class="w-[120px] md:w-[200px] h-auto max-w-full" src={import("../assets/img/partneri/broumovLogo.png")} alt="Město Broumov" format={"webp"} /></a>
+<div class="flex flex-col sm:landscape:flex-row sm:landscape:space-x-10 sm:landscape:space-y-0 md:flex-row flex-auto md:space-x-20 space-y-10 md:space-y-0 justify-evenly items-center mx-5 p-6">
+  <a class="max-w-fit h-fit" aria-label="DDM Ulita Broumov" href="https://ulita.org" target="_blank"><Image aria-hidden={"true"} class="w-[150px] md:w-[200px] h-auto max-w-full" src={import("../assets/img/partneri/ulitaLogo.png")} alt="DDM Ulita Broumov" format={"webp"} /></a>
+  <a class="max-w-fit h-fit" aria-label="Insititut Regionální Paměti, z.ú." href="https://broumovsko.org" target="_blank"><Image aria-hidden={"true"} class="w-[150px] md:w-[250px] h-auto max-w-full" src={import("../assets/img/partneri/irpLogo.png")} alt="Insititut Regionální Paměti, z.ú." format={"webp"} /></a>
+  <a class="max-w-fit h-fit" aria-label="Město Broumov" href="https://broumov-mesto.cz" target="_blank"><Image aria-hidden={"true"} class="w-[120px] md:w-[150px] h-auto max-w-full" src={import("../assets/img/partneri/broumovLogo.png")} alt="Město Broumov" format={"webp"} /></a>
 </div>
+<div id="eulogos" class="flex flex-col md:flex-row flex-auto md:space-x-20 space-y-10 md:space-y-0 justify-center items-center mx-5 p-6">
+  <Image aria-hidden={"true"} class=" max-w-full md:max-w-[65%] h-auto" src={import("../assets/img/partneri/euLogo.png")} alt="Za podpory Evropské Unie" format={"webp"} />
+<Image aria-hidden={"true"} class=" max-h-[75px] md:max-h-[120px] w-auto" src={import("../assets/img/partneri/glacensisLogo.png")} alt="Za podpory Evropské Unie" format={"webp"} />
+</div>
+
+
 </Card>
 </Layout>

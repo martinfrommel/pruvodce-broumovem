@@ -8,24 +8,24 @@ const { page, frontmatter } = Astro.props;
 ---
 <Layout title={frontmatter.title} description={`Průvodce Broumovem - ${frontmatter.title} - ${frontmatter.excerpt}`}>
 
-  <div id="pamatka-single" class="md:py-12 md:pl-12 md:pr-0 linky-bg bg-secondary rounded-sm pt-0 pb-5 px-4">
-    <section class="flex flex-col md:flex-row flex-auto basis-1/2">
+  <div id="pamatka-single" class="md:py-12 md:pl-12 md:pr-0 linky-bg bg-secondary rounded-md pt-0 py-5 px-4">
+    <section class="flex flex-col lg:flex-row flex-auto basis-1/2">
         <div class="py-0 flex flex-col">
         <div aria-hidden="true" id="idBlob" class="md:block hidden absolute md:scale-[40%] md:-translate-y-[50%] md:-translate-x-[67%] -rotate-12 z-50">
           <BlobSingle id={frontmatter.id} className="transition-all" />
         </div>
         <article class="flex flex-col text-left md:text-justify justify-start items-start space-y-4">
-          <h1 class="lg:leading-loose leading-relaxed text-center md:text-left mb-3 bg-tertiary text-primary rounded-sm max-w-fit py-3 px-7">
+          <h1 class="lg:leading-loose leading-relaxed text-center md:text-left mb-3 bg-tertiary text-primary rounded-md max-w-fit py-3 px-7">
             <span class="text-4xl md:hidden">{frontmatter.id}.</span> {frontmatter.title}
           </h1>
-           <div aria-labelledby="Detail památky" class="inline-block text-[#313131] text-justify space-y-4">
+           <div aria-labelledby="Detail památky" class="inline-block text-[#313131] text-justify space-y-4  md:max-w-[93%]">
             <slot />
           </div>
         </article>
-        <a class="btn my-7 md:mt-10 w-full text-center z-auto hidden md:block" href={`/#${frontmatter.trasa}-${frontmatter.id}`}>Zpět</a>
+        <a class="btn my-7 md:mt-10 w-full text-center z-auto hidden md:block md:max-w-xs" href={`/#${frontmatter.trasa}-${frontmatter.id}`} rel="prefetch">Zpět</a>
       </div>
       {frontmatter.image &&
-        <Image aria-hidden={"true"} class="md:max-h-[700px] md:mr-5 mt-3 md:mt-0 flex-auto rounded-sm md:px-5 md:place-self-center" src={import (`../assets/img/pamatky/${frontmatter.image}.webp`)} alt={frontmatter.title} />
+        <Image aria-hidden={"true"} class="md:max-h-[700px] md:mr-5  mt-3 md:mt-0 flex-auto rounded-sm md:px-5 md:place-self-center" src={import (`../assets/img/pamatky/${frontmatter.image}.webp`)} alt={frontmatter.title} />
         }
     <a class="btn my-7 md:mt-10 w-full text-center z-auto md:hidden" href={`/#${frontmatter.trasa}-${frontmatter.id}`} rel="prefetch">Zpět</a>
     </section>
