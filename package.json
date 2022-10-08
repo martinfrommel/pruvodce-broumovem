@@ -10,14 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.1.2",
     "@astrojs/image": "^0.7.0",
     "@astrojs/mdx": "^0.11.4",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/turbolinks": "^0.1.4",
+    "@types/alpinejs": "^3.7.0",
+    "alpinejs": "^3.10.4",
     "astro": "^1.2.1",
-    "autoprefixer": "^10.4.9"
+    "autoprefixer": "^10.4.9",
+    "daisyui": "^2.31.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1",

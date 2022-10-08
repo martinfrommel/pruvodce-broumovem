@@ -1,11 +1,13 @@
 ---
-import { Picture } from '@astrojs/image/components';
-import tailwindIcon from '../assets/svg/tailwindIcon.svg';
-import astroIcon from '../assets/svg/astroIcon.svg';
-import alpinejsIcon from '../assets/svg/alpinejsIcon.svg';
+import { Picture } from "@astrojs/image/components";
+import tailwindIcon from "../assets/svg/tailwindIcon.svg";
+import astroIcon from "../assets/svg/astroIcon.svg";
+import alpinejsIcon from "../assets/svg/alpinejsIcon.svg";
 ---
 
-<footer class="min-w-full max-h-fit bg-tertiary p-7 flex flex-wrap flex-row flex-auto justify-center text-xs text-slate-900">
+<footer
+  class="min-w-full max-h-fit bg-tertiary p-7 flex flex-wrap flex-row flex-auto justify-center text-xs text-slate-900"
+>
   <!-- <div id="sponsors" class="flex flex-wrap flex-col justify-center items-center space-y-4">
     <p class="font-bold">Sponzoři:</p>
     <div id="sponsors-logos" class="flex flex-row flex-wrap justify-center items-center space-x-5">
@@ -13,22 +15,53 @@ import alpinejsIcon from '../assets/svg/alpinejsIcon.svg';
       <Picture src={import ("../assets/img/partneri/euLogo.png")} widths={[100,200]} sizes="(max-width: 20%)" aspectRatio="39:11" alt="S podporou Evropské Unie"/>
       <Picture src={import ("../assets/img/partneri/irpLogo.png")} widths={[100]} sizes="(max-width: 20%)" aspectRatio="18:9" alt="Institut Regionální Paměti"/>
       </div> -->
-      <div id="copyright" class="flex flex-col flex-wrap space-y-4 justify-center items-center">
-        <p>
-        <span class="font-bold">Kontakt: </span> <a class="underline" href="mailto:info@pruvodcebroumovem.cz" target="_self">info@pruvodcebroumovem.cz</a>
+  <div
+    id="copyright"
+    class="flex flex-col flex-wrap space-y-4 justify-center items-center"
+  >
+    <p>
+      <span class="font-bold">Kontakt:</span>
+      <a
+        class="underline"
+        href="mailto:info@pruvodcebroumovem.cz"
+        target="_self">info@pruvodcebroumovem.cz</a
+      >
+    </p>
+    <div class="flex flex-col space-y-1 sm:inline-flex sm:space-x-1">
+      <p class="text-[0.65rem]">
+        Vytvořil <a
+          class="underline mx-1"
+          href="https://martinfrommel.site"
+          target="_blank"
+        >
+          Martin Frommel
+        </a> s pomocí
       </p>
-      <div class="flex flex-col space-y-1  sm:inline-flex sm:space-x-1">
-        <p class="text-[0.5em]">
-        Vytvořil <a class="underline mx-1" href="https://martinfrommel.site" target="_blank"> Martin Frommel </a> s pomocí
-        </p>
-        <div class="inline-flex space-x-1 justify-center items-center">
-            <a aria-label="Astro" href="https://astro.build" target="_blank"><img aria-hidden="true" class="h-6" src={astroIcon} alt="Astro"/></a>
-            <a aria-label="Tailwind CSS" href="https://tailwindcss.com" target="_blank"><img aria-hidden="true" class="h-4" src={tailwindIcon} alt="TailwindCSS"/></a>
-            <a aria-label="AlpineJS" href="https://alpinejs.dev" target="_blank"><img aria-hidden="true" class="h-4" src={alpinejsIcon} alt="Alpine JS"/></a>
-        </div>
+      <div class="inline-flex space-x-1 justify-center items-center">
+        <a aria-label="Astro" href="https://astro.build" target="_blank"
+          ><img aria-hidden="true" class="h-6" src={astroIcon} alt="Astro" />
+        </a>
+        <a
+          aria-label="Tailwind CSS"
+          href="https://tailwindcss.com"
+          target="_blank"
+          ><img
+            aria-hidden="true"
+            class="h-4"
+            src={tailwindIcon}
+            alt="TailwindCSS"
+          />
+        </a>
+        <a aria-label="AlpineJS" href="https://alpinejs.dev" target="_blank"
+          ><img
+            aria-hidden="true"
+            class="h-4"
+            src={alpinejsIcon}
+            alt="Alpine JS"
+          />
+        </a>
       </div>
-
-      </div>
-<!-- </div> -->
-
+    </div>
+  </div>
+  <!-- </div> -->
 </footer>

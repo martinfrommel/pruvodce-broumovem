@@ -1,0 +1,29 @@
+---
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+  images: Array<string>;
+  imgAlt?: string;
+}
+
+const { images, imgAlt } = Astro.props;
+---
+
+<div
+  class={`${
+    images.length > 2 ? "md:columns-2" : "flex flex-col flex-shrink flex-wrap"
+  } gap-3 space-y-5 flex-shrink w-auto`}
+>
+  {
+    images.map((image) => (
+      <Image
+        id={image}
+        src={import(`../assets/img/pamatky/${image}.jpg`)}
+        alt={imgAlt}
+        class={"rounded-md drop-shadow-md transition-all ease-in-out"}
+        format={"webp"}
+        width={700}
+      />
+    ))
+  }
+</div>

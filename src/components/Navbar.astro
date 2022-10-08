@@ -3,10 +3,24 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
 ---
 
-<nav aria-label="Navigační menu" id="menu" class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0">
-    <a class={currentPath === "" ? "active " : "inactive"} href="/" rel="prefetch">Domů</a>
-    <a class={currentPath === "o-projektu" ? "active " : "inactive"} href="/o-projektu" rel="prefetch">O projektu</a>
-    <a class={currentPath === "partneri" ? "active " : "inactive"} href="/partneri" rel="prefetch">Partneři</a>
+<nav
+  aria-label="Navigační menu"
+  id="menu"
+  class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0"
+>
+  <a class={currentPath === "" ? "active " : "inactive"} href="/" rel="prefetch"
+    >Domů</a
+  >
+  <a
+    class={currentPath === "o-projektu" ? "active " : "inactive"}
+    href="/o-projektu"
+    rel="prefetch">O projektu</a
+  >
+  <a
+    class={currentPath === "partneri" ? "active " : "inactive"}
+    href="/partneri"
+    rel="prefetch">Partneři</a
+  >
 </nav>
 
 <style>
@@ -14,35 +28,38 @@ const currentPath = pathname.slice(1);
     @apply font-bold;
   }
   .inactive {
-    @apply  transition-all ease-bounce;
-		border-bottom-width: 0;
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-		background-size: 0 2px;
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-	}
-
-	.inactive:hover {
-		background-size: 100% 2px;
-		background-position: 0 100%
-	}
-
-.active {
-  @apply  transition-all ease-bounce;
+    @apply transition-all;
     border-bottom-width: 0;
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-		background-size: 100% 2px;
-		background-position: 100% 100%;
-		background-repeat: no-repeat;
-    }
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
 
-    .active:hover {
+  .inactive:hover {
+    background-size: 100% 2px;
+    background-position: 0 100%;
+  }
+
+  .active {
+    @apply transition-all;
     border-bottom-width: 0;
-		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-		background-size: 0 2px;
-		background-position: 100% 100%;
-		background-repeat: no-repeat;
-    }
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 100% 2px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .active:hover {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 0 2px;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
 </style>
 <!--
 <script>

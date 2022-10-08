@@ -1,76 +1,82 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
   description: string;
 }
 
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="cs" class="min-h-screen min-w-screen h-screen w-screen">
+<html lang="cs">
   <BaseHead title={title} description={description} />
-	<body class="min-h-full min-w-full bg-primary text-secondary flex flex-col flex-1 justify-between ">
+  <body
+    class="min-h-full min-w-full bg-primary text-secondary flex flex-col flex-1 justify-between"
+  >
     <Header />
-    <main id="content" class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full">
+    <main
+      id="content"
+      class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full"
+    >
       <slot>
         <h1 class="justify-self-center">Zatím tu nic není!</h1>
       </slot>
     </main>
     <Footer />
-	</body>
+    <!-- <script
+      defer
+      src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script> -->
+
+    <style is:global>
+      @import url("https://use.typekit.net/csa2fon.css");
+
+      html {
+        font-family: "lato", Helvetica, sans-serif !important;
+        font-weight: 400;
+        @apply h-screen min-h-screen w-screen min-w-full scroll-smooth transition-all ease-in-out selection:bg-primary selection:text-secondary motion-reduce:scroll-auto;
+      }
+
+      body {
+        background: center / cover border-box no-repeat
+          url(../../src/assets/svg/bodyBgLines.svg);
+        background-attachment: fixed;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @apply mt-4 leading-loose;
+        font-family: "lato";
+      }
+
+      h1 {
+        @apply text-3xl text-secondary;
+        font-weight: 700;
+      }
+
+      h2 {
+        @apply text-2xl text-secondary;
+        font-weight: 700;
+      }
+
+      h3 {
+        @apply text-xl tracking-wide text-secondary;
+      }
+
+      p {
+        font-family: "lato";
+        font-weight: 400;
+      }
+    </style>
+  </body>
 </html>
-
-<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-
-<style is:global>
-  @import url("https://use.typekit.net/csa2fon.css");
-
-html {
-  font-family: 'lato'!important;
-  font-weight: 400;
-  @apply selection:bg-primary selection:text-secondary scroll-smooth motion-reduce:scroll-auto transition-all ease-in-out;
-}
-
-body {
-  background: center / cover border-box no-repeat url(../../src/assets/svg/bodyBgLines.svg);
-  background-attachment: fixed;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @apply leading-loose mt-4;
- font-family: 'lato';
-
-}
-
-h1 {
-  @apply text-3xl text-secondary;
-  font-weight: 700;
-}
-
-h2 {
-  @apply text-2xl text-secondary;
-  font-weight: 700;
-}
-
-h3 {
-  @apply text-xl text-secondary tracking-wide;
-}
-
-p {
-  font-family: 'lato';
-  font-weight: 400;
-}
-
-.btn {
-  @apply py-3 px-5 bg-quarternary-500 text-white font-bold hover:bg-quarternary-600 rounded-md transition-all ease-out;
-}
-
-</style>
-

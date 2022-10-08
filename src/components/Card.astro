@@ -5,12 +5,13 @@ export interface Props {
 
 const { className } = Astro.props;
 ---
+
 <div class={`card ${className}`}>
-  <slot/>
+  <slot />
 </div>
 
 <style>
-.card {
-  @apply flex flex-col flex-nowrap rounded-md flex-shrink drop-shadow-md;
-}
+  .card {
+    @apply flex flex-shrink flex-col flex-nowrap rounded-md drop-shadow-md;
+  }
 </style>

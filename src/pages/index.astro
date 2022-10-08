@@ -1,47 +1,72 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import IndexBlobs from '../assets/img/indexBlobs.png';
-import { Picture } from '@astrojs/image/components';
-import PamatkyGridSingle from '../components/PamatkyGridSingle.astro';
+import Layout from "../layouts/Layout.astro";
+import IndexBlobs from "../assets/img/indexBlobs.png";
+import { Picture } from "@astrojs/image/components";
+import PamatkyGridSingle from "../components/PamatkyGridSingle.astro";
 
-const description = "Přijmete pozvánku na procházku Broumovem s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století."
+const description =
+  "Přijmete pozvánku na procházku Broumovem s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století.";
 ---
 
 <Layout title="Průvodce Broumovem" description={description}>
-
-<div id="container" class="flex flex-col space-y-10 lg:flex-row lg:space-x-10 items-center justify-evenly linky-bg">
-  <section aria-labelledby="Uvítací sekce" id="welcome" class="flex basis-6/12 flex-col flex-auto flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md">
-    <h1>
-      <p>
-      <span class="text-secondary tracking-wide font-light text-2xl">Přijměte pozvánku na</span>
-      <br/>
-      <span class="tracking-widest text-3xl leading-relaxed font-bold uppercase text-quarternary-500">procházku Broumovem</span>
-      <br/>
-      <span class="text-secondary tracking-wide font-light text-2xl">s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století</span>
-    </p>
+  <div
+    id="container"
+    class="flex flex-col space-y-10 lg:flex-row lg:space-x-10 items-center justify-evenly linky-bg"
+  >
+    <section
+      aria-labelledby="Uvítací sekce"
+      id="welcome"
+      class="flex basis-6/12 flex-col flex-auto flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md"
+    >
+      <h1>
+        <p>
+          <span class="text-secondary tracking-wide font-light text-2xl"
+            >Přijměte pozvánku na</span
+          >
+          <br />
+          <span
+            class="tracking-widest text-3xl leading-relaxed font-bold uppercase text-quarternary-500"
+            >procházku Broumovem</span
+          >
+          <br />
+          <span class="text-secondary tracking-wide font-light text-2xl"
+            >s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20.
+            století</span
+          >
+        </p>
       </h1>
-      <p class="mt-3">
-        <h2 class="font-normal text-2xl">Co vás čeká?</h2>
-      </p>
+      <p class="mt-3"></p><h2 class="font-normal text-2xl">Co vás čeká?</h2>
+
       <p class="mt-5 text-[1.1rem] font-light tracking-wider">
-        Během procházky se setkáte s pozůstatky architektonické  a urbanistické citlivosti budovatelů města z přelomu 19. a 20. století, o jehož rozvoj se zasloužily rodiny Schrollových, Dimterových, Nowotných, Meierových, Pollackových a další. V té době město vzkvétalo především díky bohatství plynoucímu z rozvinutého textilního průmyslu.
-        Původní podoba mnohých vil se nedochovala, stejně jako některé obytné a průmyslové stavby. Některé objekty byly zcela zbořeny, jinde ubral na kráse zub času, nedostatečná péče a nebo necitlivé stavební zásahy. Jen málo budov se dočkalo rekonstrukcí, které jim vrátily jejich půvab.
-        K vilám patřily neodmyslitelně zahrady s altány a oranžeriemi. Zahrady a parky jsou v současnosti většinou veřejně přístupné jako součást městské zeleně. Ačkoli jsou moderně upravovány, své kouzlo si částečně uchovaly dodnes.
+        Během procházky se setkáte s pozůstatky architektonické a urbanistické
+        citlivosti budovatelů města z přelomu 19. a 20. století, o jehož rozvoj
+        se zasloužily rodiny Schrollových, Dimterových, Nowotných, Meierových,
+        Pollackových a další. V té době město vzkvétalo především díky bohatství
+        plynoucímu z rozvinutého textilního průmyslu. Původní podoba mnohých vil
+        se nedochovala, stejně jako některé obytné a průmyslové stavby. Některé
+        objekty byly zcela zbořeny, jinde ubral na kráse zub času, nedostatečná
+        péče a nebo necitlivé stavební zásahy. Jen málo budov se dočkalo
+        rekonstrukcí, které jim vrátily jejich půvab. K vilám patřily
+        neodmyslitelně zahrady s altány a oranžeriemi. Zahrady a parky jsou v
+        současnosti většinou veřejně přístupné jako součást městské zeleně.
+        Ačkoli jsou moderně upravovány, své kouzlo si částečně uchovaly dodnes.
         Přejeme vám na procházce historií s naším průvodcem příjemné zážitky!
       </p>
-  </section>
+    </section>
 
-  <section aria-hidden="true" class="flex-auto basis-1/6 -z-10" >
-    <Picture  src={IndexBlobs} widths={[400, 500, 600]} aspectRatio={"1143:1255"} alt="" sizes="(max-width: 2048px)" formats={['webp', 'avif', 'png']} />
-  </section>
-</div>
+    <section aria-hidden="true" class="flex-auto basis-1/6 z-auto">
+      <Picture
+        src={IndexBlobs}
+        widths={[400, 500, 600]}
+        aspectRatio={"1143:1255"}
+        alt=""
+        sizes="(max-width: 2048px)"
+        formats={["webp", "avif", "png"]}
+      />
+    </section>
+  </div>
 
-<PamatkyGridSingle />
-
-
+  <PamatkyGridSingle />
 </Layout>
 
-<style>
-
-</style>
-
+<style></style>

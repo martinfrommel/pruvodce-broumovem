@@ -3,8 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import BlobSingle from "../components/BlobSingle.astro";
 import { Image } from "@astrojs/image/components";
+import ImageGrid from "../components/ImageGrid.astro";
 
 const { page, frontmatter } = Astro.props;
+
+const testImages = [""];
 ---
 
 <Layout
@@ -13,10 +16,10 @@ const { page, frontmatter } = Astro.props;
 >
   <div
     id="pamatka-single"
-    class="md:py-12 md:pl-12 md:pr-0 linky-bg bg-secondary rounded-md pt-0 py-5 px-4"
+    class="md:p-12 linky-bg bg-secondary rounded-md pt-0 py-5 px-4 scroll-m-24"
   >
-    <section class="flex flex-col lg:flex-row flex-auto basis-1/2">
-      <div class="py-0 flex flex-col">
+    <section class="flex flex-col lg:flex-row flex-auto space-y-5">
+      <div class="py-0 flex flex-col justify-between basis-4/5">
         <div
           aria-hidden="true"
           id="idBlob"
@@ -41,17 +44,19 @@ const { page, frontmatter } = Astro.props;
           </div>
         </article>
         <a
-          class="btn my-7 md:mt-10 w-full text-center z-auto hidden md:block md:max-w-xs"
-          href={`/#${frontmatter.trasa}-${frontmatter.id}`}
+          class="btn my-7 btn-accent max-w-lg hidden md:inline-flex"
+          href={`/#${frontmatter.id}`}
           rel="prefetch">Zpět</a
         >
       </div>
+      {frontmatter.images && <ImageGrid images={frontmatter.images} />}
+
       {
-        frontmatter.image && (
+        frontmatter.singleImage && (
           <Image
             aria-hidden={"true"}
             class="mt-3 flex-auto  rounded-sm drop-shadow-md md:mr-5 md:mt-0 md:max-w-[45%] md:place-self-center md:px-5"
-            src={import(`../assets/img/pamatky/${frontmatter.image}.jpg`)}
+            src={import(`../assets/img/pamatky/${frontmatter.singleImage}.jpg`)}
             alt={frontmatter.title}
             format={"webp"}
           />
@@ -59,11 +64,15 @@ const { page, frontmatter } = Astro.props;
       }
       <a
         class="btn my-7 md:mt-10 w-full text-center z-auto md:hidden"
-        href={`/#${frontmatter.trasa}-${frontmatter.id}`}
+        href={`/#${frontmatter.id}`}
         rel="prefetch">Zpět</a
       >
     </section>
   </div>
 </Layout>
 
-<style></style>
+<style>
+  #idBlob {
+    z-index: 0 !important;
+  }
+</style>
