@@ -9,9 +9,16 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pruvodcebroumovem.cz',
-  integrations: [tailwind(), prefetch({
-    throttle: 3
-  }), image(), sitemap(), turbolinks(), mdx()],
-  site: "https://pruvodcebroumovem.cz"
+  site: "https://pruvodcebroumovem.cz",
+  integrations: [
+    tailwind(),
+    prefetch({
+      throttle: 3,
+    }),
+    image(),
+    sitemap(),
+    turbolinks(),
+    mdx(),
+  ],
+  site: "https://pruvodcebroumovem.cz",
 });

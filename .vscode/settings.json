@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+  "*.mdx": "markdown"
+},
+"prettier.documentSelectors": [
+  "**/*.astro\""
+],
+"editor.formatOnSave": true,
+"editor.formatOnPaste": true,
+"astro.typescript.allowArbitraryAttributes": true,
+"editor.formatOnType": true,
+"scss.format.spaceAroundSelectorSeparator": true,
+"[astro]": {
+  "editor.defaultFormatter": "astro-build.astro-vscode"
+},
+
+}

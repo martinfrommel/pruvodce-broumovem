@@ -2,13 +2,13 @@
 import { Image } from "@astrojs/image/components";
 import BlobSingle from "./BlobSingle.astro";
 
-const trasaA = (await Astro.glob('../pages/pamatky/trasa-a/*.md')).sort(
+const trasaA = (await Astro.glob('../pages/pamatky/trasa-a/*.mdx')).sort(
     (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
     );
 
-const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
-    (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
-    );
+// const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
+//     (a, b) => new Number(a.frontmatter.id).valueOf() - new Number(b.frontmatter.id).valueOf()
+//     );
 
 ---
 
@@ -17,7 +17,7 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
   <!-- Toggle Trasa -->
     <nav class="flex flex-row justify-center items-center space-x-5">
       <button aria-label="Zvolit trasu A" x-bind:class="trasa === 'Trasa A' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa A';">Trasa A</button>
-      <button aria-label="Zvolit trasu B" x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button>
+      <!-- <button aria-label="Zvolit trasu B" x-bind:class="trasa === 'Trasa B' ? 'activeTab' : ''" class="btn w-full h-fit" x-on:click="trasa = 'Trasa B';">Trasa B</button> -->
     </nav>
         <!-- Trasa A List -->
           <ul aria-label="Seznam památek v trase A" x-show="trasa === 'Trasa A'"  class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
@@ -39,7 +39,7 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
              </li>
           ))}
         </ul>
-        <!-- Trasa B List -->
+        <!-- Trasa B List
          <ul aria-label="Seznam památek v trase B" x-show="trasa === 'Trasa B'" class="flex flex-wrap flex-auto items-stretch justify-evenly transition-all ease-in-out mt-3">
           {trasaB.map(pamatka =>(
             <li aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`} id={`${pamatka.frontmatter.trasa}-${pamatka.frontmatter.id}`} class="flex items-start justify-evenly bg-secondary text-[#313131] md:flex-row flex-col-reverse sm:landscape:flex-row flex-nowrap sm:landscape:space-x-5 md:space-x-7 md:space-y-0 px-4 md:px-7 py-3 rounded-md md:items-start md:justify-start flex-auto md:basis-full lg:basis-1/3 md:text-justify m-3 scroll-m-28">
@@ -58,7 +58,7 @@ const trasaB = (await Astro.glob('../pages/pamatky/trasa-b/*.md')).sort(
                 </div>
              </li>
           ))}
-        </ul>
+        </ul> -->
 
 </section>
 
