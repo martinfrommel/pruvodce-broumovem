@@ -5,7 +5,7 @@ title: Café Herzog
 address: Mírové náměstí čp. 129
 excerpt: Snad nejpůsobivějším reprezentantem historismu, s náznaky blížící se secese, která se na broumovském náměstí jinak neuplatnila, je honosná budova Herzogovy kavárny. Objekt byl postaven se záměrem pohostinského zařízení, v přízemí byla vyhlášená cukrárna s pekárnou, v patře kavárna a horní patra sloužila jako hotel.
 frontImage: "1"
-images: ["1", "1.1", "1.2"]
+images: ["1", "1.1", "1.2", "1.3"]
 lang: cs
 ---
 
