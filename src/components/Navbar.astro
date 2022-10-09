@@ -6,32 +6,68 @@ const currentPath = pathname.slice(1);
 <nav
   aria-label="Navigační menu"
   id="menu"
-  class="flex flex-wrap flex-row space-x-5 items-center mt-5 sm:mt-0"
+  class="sm:menu sm:menu-horizontal btn-group btn-group-horizontal items-center mt-5 sm:mt-0 flex-1 max-w-fit ml-10 hidden"
 >
-  <a class={currentPath === "" ? "active " : "inactive"} href="/" rel="prefetch"
-    >Domů</a
+  <a
+    class={`${currentPath === "" ? "active " : "inactive"} btn btn-secondary`}
+    href="/"
+    rel="prefetch">Domů</a
   >
   <a
-    class={currentPath === "o-projektu" ? "active " : "inactive"}
+    class={`${
+      currentPath === "o-projektu" ? "active " : "inactive"
+    } btn btn-secondary`}
     href="/o-projektu"
     rel="prefetch">O projektu</a
   >
   <a
-    class={currentPath === "partneri" ? "active " : "inactive"}
+    class={`${
+      currentPath === "partneri" ? "active " : "inactive"
+    } btn btn-secondary`}
     href="/partneri"
     rel="prefetch">Partneři</a
   >
 </nav>
 
+<label for="mobile-menu" class="btn modal-button sm:hidden w-full mt-6"
+  >Menu</label
+>
+
+<input type="checkbox" id="mobile-menu" class="modal-toggle sm:hidden" />
+<label for="mobile-menu" class="modal cursor-pointer bg-base-100/80 sm:hidden">
+  <nav
+    aria-label="Navigační menu"
+    id="menu"
+    class="menu menu-vertical space-y-5 sm:hidden w-4/5"
+  >
+    <a
+      class={`${currentPath === "" ? "active " : "inactive"} btn btn-primary`}
+      href="/"
+      rel="prefetch">Domů</a
+    >
+    <a
+      class={`${
+        currentPath === "o-projektu" ? "active " : "inactive"
+      } btn btn-primary`}
+      href="/o-projektu"
+      rel="prefetch">O projektu</a
+    >
+    <a
+      class={`${
+        currentPath === "partneri" ? "active " : "inactive"
+      } btn btn-primary`}
+      href="/partneri"
+      rel="prefetch">Partneři</a
+    >
+  </nav>
+</label>
+
 <style>
-  #menu a {
-    @apply font-bold;
-  }
   .inactive {
     @apply transition-all;
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent),
-      linear-gradient(#fff, #fff);
+      linear-gradient(#181e7c, #181e7c);
     background-size: 0 2px;
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -46,7 +82,7 @@ const currentPath = pathname.slice(1);
     @apply transition-all;
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent),
-      linear-gradient(#fff, #fff);
+      linear-gradient(#181e7c, #181e7c);
     background-size: 100% 2px;
     background-position: 100% 100%;
     background-repeat: no-repeat;
@@ -55,7 +91,7 @@ const currentPath = pathname.slice(1);
   .active:hover {
     border-bottom-width: 0;
     background-image: linear-gradient(transparent, transparent),
-      linear-gradient(#fff, #fff);
+      linear-gradient(#181e7c, #181e7c);
     background-size: 0 2px;
     background-position: 100% 100%;
     background-repeat: no-repeat;
