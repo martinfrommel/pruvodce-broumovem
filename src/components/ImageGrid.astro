@@ -11,19 +11,36 @@ const { images, imgAlt } = Astro.props;
 
 <div
   class={`${
-    images.length > 2 ? "md:columns-2" : "flex flex-col flex-shrink flex-wrap"
-  } gap-3 space-y-5 flex-shrink w-auto`}
+    images.length > 3
+      ? "md:columns-2 space-y-5 basis-1/2 md:gap-3"
+      : "flex flex-row flex-wrap justify-evenly items-start flex-shrink basis-1/2 w-fit"
+  }  overflow-hidden h-full max-h-full`}
 >
   {
     images.map((image) => (
+      <label for={`img-${image}-modal`} class="">
       <Image
         id={image}
         src={import(`../assets/img/pamatky/${image}.jpg`)}
         alt={imgAlt}
-        class={"rounded-md drop-shadow-md transition-all ease-in-out"}
+        class={`m-5 h-auto flex-shrink rounded-md object-scale-down drop-shadow-md transition-all
+        ease-in-out md:min-w-0`}
         format={"webp"}
-        width={700}
+        width={550}
       />
+      </label>
+
+      <input type="checkbox" id={`img-${image}-modal`} class="modal-toggle" />
+      <label for={`img-${image}-modal`} class="modal cursor-pointer">
+          <Image
+        id={image}
+        src={import(`../assets/img/pamatky/${image}.jpg`)}
+        alt={imgAlt}
+        class={`rounded-md drop-shadow-md transition-all ease-in-out w-[90%] h-auto md:h-[95%] md:w-auto object-contain`}
+        format={"webp"}
+        width={1800}
+      />
+      </label>
     ))
   }
 </div>

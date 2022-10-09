@@ -18,8 +18,10 @@ const testImages = [""];
     id="pamatka-single"
     class="md:p-12 linky-bg bg-secondary rounded-md pt-0 py-5 px-4 scroll-m-24"
   >
-    <section class="flex flex-col lg:flex-row flex-auto space-y-5">
-      <div class="py-0 flex flex-col justify-between basis-4/5">
+    <section
+      class="flex flex-col items-center md:items-stretch md:flex-row flex-1 space-y-5 flex-wrap justify-evenly"
+    >
+      <div class="py-0 flex flex-col justify-between flex-1 flex-wrap">
         <div
           aria-hidden="true"
           id="idBlob"
@@ -58,6 +60,7 @@ const testImages = [""];
             class="mt-3 flex-auto  rounded-sm drop-shadow-md md:mr-5 md:mt-0 md:max-w-[45%] md:place-self-center md:px-5"
             src={import(`../assets/img/pamatky/${frontmatter.singleImage}.jpg`)}
             alt={frontmatter.title}
+            width={550}
             format={"webp"}
           />
         )

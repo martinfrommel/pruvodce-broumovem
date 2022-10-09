@@ -21,6 +21,7 @@
     "alpinejs": "^3.10.4",
     "astro": "^1.2.1",
     "autoprefixer": "^10.4.9",
+    "cssnano": "^5.1.13",
     "daisyui": "^2.31.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
