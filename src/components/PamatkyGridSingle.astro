@@ -9,61 +9,71 @@ const trasaA = (await Astro.glob("../pages/pamatky/trasa-a/*.md")).sort(
 );
 ---
 
-<ul
-  aria-label="Seznam památek v trase A"
-  class="columns-1 md:columns-2 transition-all ease-in-out mt-3 gap-10"
->
-  {
-    trasaA.map((pamatka) => (
-      <li
-        aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`}
-        id={`${pamatka.frontmatter.id}`}
-        class="m-3 flex flex-auto scroll-m-28 flex-col flex-wrap items-start justify-start rounded-md bg-secondary p-0 text-[#313131] drop-shadow-md md:space-y-0 md:text-justify"
-      >
-        <div
-          aria-hidden="true"
-          id="idBlob"
-          class="z-50 hidden -rotate-12 md:absolute md:block md:-translate-y-[40%] md:-translate-x-[45%] md:scale-[30%]"
+<div id="pamatky-list-container" class="flex flex-col flex-nowrap flex-none min-h-min w-full h-fit justify-center items-center bg-secondary/20 md:p-5 p-3 rounded-md overflow-visible " x-data="{show: $persist(false).using(sessionStorage)}">
+  <button class="btn btn-accent btn-xl self-start w-full" @click="show = !show">Zobrazit/skrýt památky  </button>
+  <ul
+    x-show="show"
+    x-cloak
+    aria-label="Seznam památek"
+    class="columns-1 md:columns-2 transition-all ease-in-out mt-3 gap-10 overflow-visible w-full h-auto py-4"
+  >
+    {
+      trasaA.map((pamatka) => (
+        <li
+          x-show="show"
+          x-cloak
+          aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`}
+          id={`${pamatka.frontmatter.id}`}
+          class="m-3 flex flex-auto scroll-m-28 flex-col flex-wrap items-start justify-start rounded-md bg-secondary p-0 text-[#313131] drop-shadow-md md:space-y-0 md:text-justify" x-transition.delay.250ms;
         >
-          <BlobSingle id={pamatka.frontmatter.id} className="transition-all" />
-        </div>
-        {pamatka.frontmatter.frontImage && (
-          <Image
-            aria-hidden={"true"}
-            class="rounded-md md:max-w-full"
-            src={import(
-              `../assets/img/pamatky/${pamatka.frontmatter.frontImage}.jpg`
-            )}
-            alt={pamatka.frontmatter.title}
-            format={"webp"}
-            width={750}
-          />
-        )}
-        <div class="flex flex-col flex-nowrap items-start justify-end px-4 py-3">
-          <a aria-hidden="true" href={pamatka.url} rel="prefetch">
-            <h3 class="rounded-md bg-tertiary px-4 py-3 text-left font-bold leading-relaxed text-primary">
-              <span class="text-3xl md:hidden">
-                {pamatka.frontmatter.id}.&nbsp;
-              </span>
-              {pamatka.frontmatter.title}
-            </h3>
-          </a>
-
-          <p class="mt-3 text-sm font-bold text-slate-900/60">
-            {pamatka.frontmatter.address}
-          </p>
-          <p aria-hidden="true" class="my-3 max-w-2xl">
-            {pamatka.frontmatter.excerpt}
-          </p>
-          <a
-            class="btn btn-accent my-3 justify-self-end"
-            href={pamatka.url}
-            rel="prefetch"
+          <div
+            aria-hidden="true"
+            id="idBlob"
+            class="z-50 hidden -rotate-12 md:absolute md:block md:-translate-y-[40%] md:-translate-x-[45%] md:scale-[30%]"
           >
-            Zobrazit památku
-          </a>
-        </div>
-      </li>
-    ))
-  }
-</ul>
+            <BlobSingle
+              id={pamatka.frontmatter.id}
+              className="transition-all"
+            />
+          </div>
+          {pamatka.frontmatter.frontImage && (
+            <Image
+              aria-hidden={"true"}
+              class="rounded-md md:max-w-full w-full"
+              src={import(
+                `../assets/img/pamatky/${pamatka.frontmatter.frontImage}.jpg`
+              )}
+              alt={pamatka.frontmatter.title}
+              format={"webp"}
+              width={750}
+            />
+          )}
+          <div class="flex flex-col flex-nowrap items-start justify-end px-4 py-3">
+            <a aria-hidden="true" href={pamatka.url} rel="prefetch">
+              <h3 class="rounded-md bg-tertiary px-4 py-3 text-left font-bold leading-relaxed text-primary">
+                <span class="text-3xl md:hidden">
+                  {pamatka.frontmatter.id}.&nbsp;
+                </span>
+                {pamatka.frontmatter.title}
+              </h3>
+            </a>
+
+            <p class="mt-3 text-sm font-bold text-slate-900/60">
+              {pamatka.frontmatter.address}
+            </p>
+            <p aria-hidden="true" class="my-3 max-w-2xl">
+              {pamatka.frontmatter.excerpt}
+            </p>
+            <a
+              class="btn btn-accent my-3 justify-self-end"
+              href={pamatka.url}
+              rel="prefetch"
+            >
+              Zobrazit památku
+            </a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

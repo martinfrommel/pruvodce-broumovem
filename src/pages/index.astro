@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import IndexBlobs from "../assets/img/indexBlobs.png";
-import { Picture } from "@astrojs/image/components";
+import { Image, Picture } from "@astrojs/image/components";
 import PamatkyGridSingle from "../components/PamatkyGridSingle.astro";
+import EuLogo from "../assets/img/partneri/euLogo.png";
 
 const description =
   "Přijmete pozvánku na procházku Broumovem s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století.";
@@ -51,6 +52,20 @@ const description =
         současnosti většinou veřejně přístupné jako součást městské zeleně.
         Ačkoli jsou moderně upravovány, své kouzlo si částečně uchovaly dodnes.
         Přejeme vám na procházce historií s naším průvodcem příjemné zážitky!
+      </p>
+      <p class="text-lg text-secondary pt-7 text-left">S podporou</p>
+      <Image
+        class={"self-start py-3"}
+        src={EuLogo}
+        alt="Projekt Evropské Unie"
+        width={600}
+        format={["webp"]}
+      />
+      <p
+        aria-labelledby="Registrační číslo projektu EU"
+        class="text-lg font-bold text-secondary text-left"
+      >
+        30 LET SPOLU / Reg. č.: CZ.11.4.120/0.0/0.0/16_008/0003069
       </p>
     </section>
 

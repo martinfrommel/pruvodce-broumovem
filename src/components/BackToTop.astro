@@ -1,0 +1,22 @@
+<a
+  x-data="{showButton: false}"
+  class="fixed bottom-6 right-6 btn btn-square btn-accent"
+  href="#top"
+  @scroll.window="showButton = (window.pageYOffset > 500) ? true : false"
+  x-show="showButton"
+  x-transition.100ms
+  x-cloak
+  ><svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-6 h-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+  </svg>
+</a>
