@@ -17,7 +17,7 @@ const description =
     <section
       aria-labelledby="Uvítací sekce"
       id="welcome"
-      class="flex basis-6/12 flex-col flex-auto flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md"
+      class="flex basis-6/12 flex-col flex-1 flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md"
     >
       <h1>
         <p>
@@ -59,7 +59,7 @@ const description =
         src={EuLogo}
         alt="Projekt Evropské Unie"
         width={600}
-        format={["webp"]}
+        format={"webp"}
       />
       <p
         aria-labelledby="Registrační číslo projektu EU"
@@ -77,6 +77,7 @@ const description =
         alt=""
         sizes="(max-width: 2048px)"
         formats={["webp", "avif", "png"]}
+        loading="lazy"
       />
     </section>
   </div>

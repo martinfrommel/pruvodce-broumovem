@@ -9,19 +9,16 @@ const trasaA = (await Astro.glob("../pages/pamatky/trasa-a/*.md")).sort(
 );
 ---
 
-<div id="pamatky-list-container" class="flex flex-col flex-nowrap flex-none min-h-min w-full h-fit justify-center items-center bg-secondary/20 md:p-5 p-3 rounded-md overflow-visible " x-data="{show: $persist(false).using(sessionStorage)}">
-  <button class="btn btn-accent btn-xl self-start w-full" @click="show = !show">Zobrazit/skrýt památky  </button>
+<div id="pamatky-list-container" class="flex flex-col flex-nowrap flex-none min-h-min w-full h-fit justify-center items-center bg-secondary/20 md:p-5 p-3 rounded-md overflow-visible ">
+  <!-- <button class="btn btn-accent btn-xl self-start w-full" @click="show = !show">Zobrazit/skrýt památky  </button> -->
   <ul
-    x-show="show"
-    x-cloak
     aria-label="Seznam památek"
     class="columns-1 md:columns-2 transition-all ease-in-out mt-3 gap-10 overflow-visible w-full h-auto py-4"
   >
     {
       trasaA.map((pamatka) => (
         <li
-          x-show="show"
-          x-cloak
+
           aria-label={`Památka číslo ${pamatka.frontmatter.id} - ${pamatka.frontmatter.title}`}
           id={`${pamatka.frontmatter.id}`}
           class="m-3 flex flex-auto scroll-m-28 flex-col flex-wrap items-start justify-start rounded-md bg-secondary p-0 text-[#313131] drop-shadow-md md:space-y-0 md:text-justify" x-transition.delay.250ms;
@@ -46,6 +43,7 @@ const trasaA = (await Astro.glob("../pages/pamatky/trasa-a/*.md")).sort(
               alt={pamatka.frontmatter.title}
               format={"webp"}
               width={750}
+              loading="lazy"
             />
           )}
           <div class="flex flex-col flex-nowrap items-start justify-end px-4 py-3">

@@ -16,13 +16,13 @@ const { title, description } = Astro.props;
 <html lang="cs">
   <BaseHead title={title} description={description} />
   <body
-    class="min-h-full min-w-full bg-primary text-secondary flex flex-col flex-1 justify-between"
+    class="min-h-screen w-screen bg-primary text-secondary flex flex-col flex-none justify-between"
   >
     <Header />
     <label id="top" class="invisible"></label>
     <main
       id="content"
-      class="lg:p-16 p-3 flex-wrap flex justify-center items-center h-full w-full"
+      class="lg:p-16 p-3 flex-wrap flex justify-center items-center min-h-full h-full w-full"
     >
       <slot>
         <h1 class="justify-self-center">Zatím tu nic není!</h1>
@@ -31,10 +31,6 @@ const { title, description } = Astro.props;
     <Footer />
     <BackToTop />
 
-    <script
-      defer
-      src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"
-    ></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
 
@@ -49,7 +45,7 @@ const { title, description } = Astro.props;
 
       body {
         background: center / cover border-box no-repeat
-          url(../../src/assets/svg/bodyBgLines.svg);
+          url(../../src/assets/img/bg/bodyBgLines@2x.webp);
         background-attachment: fixed;
       }
 
