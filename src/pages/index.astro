@@ -17,7 +17,7 @@ const description =
     <section
       aria-labelledby="Uvítací sekce"
       id="welcome"
-      class="flex basis-6/12 flex-col flex-1 flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md"
+      class="flex basis-6/12 flex-col flex-1 flex-wrap lg:text-justify bg-secondary/20 p-5 rounded-md mb-5"
     >
       <h1>
         <p>
@@ -67,6 +67,16 @@ const description =
       >
         30 LET SPOLU / Reg. č.: CZ.11.4.120/0.0/0.0/16_008/0003069
       </p>
+      <div class="flex flex-row flex-none justify-around mt-5">
+      <p class="text-2xl font-medium tracking-wide">
+        Trasu najdete na:
+        <br/>
+        <a class="btn btn-accent w-full my-5" href="https://en.mapy.cz/s/lukonujuka" target="_blank">Mapy.cz</a>
+      </p>
+      <div class="md:block self-end border-4 border-secondary w-fit">
+        <iframe style="border:none" src="https://en.frame.mapy.cz/s/mepepolevu" width="750" height="330" frameborder="0"></iframe>
+      </div>
+      </div>
     </section>
 
     <section aria-hidden="true" class="flex-auto basis-1/6 z-auto">
@@ -84,5 +94,6 @@ const description =
 
   <PamatkyGridSingle />
 </Layout>
+
 
 <style></style>
