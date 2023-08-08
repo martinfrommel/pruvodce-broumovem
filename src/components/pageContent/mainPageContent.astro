@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import euLogo from "../../assets/img/partneri/euLogo.png";
+---
+
+<h1>
+  <p>
+    <span class="text-secondary tracking-wide font-light text-2xl"
+      >Přijměte pozvánku na</span
+    >
+    <br />
+    <span
+      class="tracking-widest text-3xl leading-relaxed font-bold uppercase text-quarternary-500"
+      >procházku Broumovem</span
+    >
+    <br />
+    <span class="text-secondary tracking-wide font-light text-2xl"
+      >s nostalgickou vzpomínkou na jeho podobu z přelomu 19. a 20. století</span
+    >
+  </p>
+</h1>
+<p class="mt-3"></p><h2 class="font-normal text-2xl">Co vás čeká?</h2>
+
+<p class="mt-5 text-[1.1rem] font-light tracking-wider">
+  Během procházky se setkáte s pozůstatky architektonické a urbanistické
+  citlivosti budovatelů města z přelomu 19. a 20. století, o jehož rozvoj se
+  zasloužily rodiny Schrollových, Dimterových, Nowotných, Meierových,
+  Pollackových a další. V té době město vzkvétalo především díky bohatství
+  plynoucímu z rozvinutého textilního průmyslu. Původní podoba mnohých vil se
+  nedochovala, stejně jako některé obytné a průmyslové stavby. Některé objekty
+  byly zcela zbořeny, jinde ubral na kráse zub času, nedostatečná péče a nebo
+  necitlivé stavební zásahy. Jen málo budov se dočkalo rekonstrukcí, které jim
+  vrátily jejich půvab. K vilám patřily neodmyslitelně zahrady s altány a
+  oranžeriemi. Zahrady a parky jsou v současnosti většinou veřejně přístupné
+  jako součást městské zeleně. Ačkoli jsou moderně upravovány, své kouzlo si
+  částečně uchovaly dodnes. Přejeme vám na procházce historií s naším průvodcem
+  příjemné zážitky!
+</p>
+<p class="text-lg text-secondary pt-7 text-left">S podporou</p>
+<Image
+  class={"self-start py-3 max-w-32"}
+  src={euLogo}
+  alt="Projekt Evropské Unie"
+  width={euLogo.width}
+  height={euLogo.height}
+  loading={"lazy"}
+  quality={"mid"}
+/>
+<p
+  aria-labelledby="Registrační číslo projektu EU"
+  class="text-lg font-bold text-secondary text-left"
+>
+  30 LET SPOLU / Reg. č.: CZ.11.4.120/0.0/0.0/16_008/0003069
+</p>
+<div class="flex flex-wrap xl:flex-row flex-none justify-around mt-5 space-x-5">
+  <p class="text-2xl font-medium tracking-wide">
+    Trasu najdete na:
+    <br />
+    <a
+      class="btn btn-accent w-full my-5"
+      href="https://en.mapy.cz/s/lukonujuka"
+      target="_blank">Mapy.cz</a
+    >
+  </p>
+  <div class="hidden xl:block self-end border-4 border-secondary w-fit">
+    <iframe
+      style="border:none"
+      src="https://en.frame.mapy.cz/s/mepepolevu"
+      width="750"
+      height="330"
+      loading="lazy"></iframe>
+  </div>
+</div>

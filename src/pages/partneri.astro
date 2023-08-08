@@ -1,7 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
+
+// Picture imports
+import ulitaLogo from "../assets/img/partneri/ulitaLogo.png";
+import institutLogo from "../assets/img/partneri/irpLogo.png";
+import broumovLogo from "../assets/img/partneri/broumovLogo.png";
+import euLogo from "../assets/img/partneri/euLogo.png";
+import glacensisLogo from "../assets/img/partneri/glacensisLogo.png";
 
 const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto partnerů. Děkujeme!`;
 ---
@@ -22,9 +29,11 @@ const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto par
         href="https://ulita.org"
         target="_blank"
         ><Image
+          width={ulitaLogo.width}
+          height={ulitaLogo.height}
           aria-hidden={"true"}
           class="w-[150px] md:w-[200px] h-auto max-w-full"
-          src={import("../assets/img/partneri/ulitaLogo.png")}
+          src={ulitaLogo}
           alt="DDM Ulita Broumov"
           format={"webp"}
         />
@@ -35,9 +44,11 @@ const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto par
         href="https://broumovsko.org"
         target="_blank"
         ><Image
+          width={institutLogo.width}
+          height={institutLogo.height}
           aria-hidden={"true"}
           class="w-[150px] md:w-[250px] h-auto max-w-full"
-          src={import("../assets/img/partneri/irpLogo.png")}
+          src={institutLogo}
           alt="Insititut Regionální Paměti, z.ú."
           format={"webp"}
         />
@@ -48,9 +59,11 @@ const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto par
         href="https://broumov-mesto.cz"
         target="_blank"
         ><Image
+          width={broumovLogo.width}
+          height={broumovLogo.height}
           aria-hidden={"true"}
           class="w-[120px] md:w-[150px] h-auto max-w-full"
-          src={import("../assets/img/partneri/broumovLogo.png")}
+          src={broumovLogo}
           alt="Město Broumov"
           format={"webp"}
         />
@@ -61,16 +74,20 @@ const description = `Projekt "Průvodce Broumovem" vznikl za podpory těchto par
       class="flex flex-col md:flex-row flex-auto md:space-x-20 space-y-10 md:space-y-0 justify-center items-center mx-5 p-6"
     >
       <Image
+        width={euLogo.width}
+        height={euLogo.height}
         aria-hidden={"true"}
         class="max-w-full md:max-w-[65%] h-auto"
-        src={import("../assets/img/partneri/euLogo.png")}
+        src={euLogo}
         alt="Za podpory Evropské Unie"
         format={"webp"}
       />
       <Image
+        width={glacensisLogo.width}
+        height={glacensisLogo.height}
         aria-hidden={"true"}
         class="max-h-[75px] md:max-h-[120px] w-auto"
-        src={import("../assets/img/partneri/glacensisLogo.png")}
+        src={glacensisLogo}
         alt="Za podpory Evropské Unie"
         format={"webp"}
       />

@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import BlobSingle from "../components/BlobSingle.astro";
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import ImageGrid from "../components/ImageGrid.astro";
 
 const { page, frontmatter } = Astro.props;
@@ -58,7 +58,7 @@ const testImages = [""];
           <Image
             aria-hidden={"true"}
             class="mt-3 flex-auto  rounded-sm drop-shadow-md md:mr-5 md:mt-0 md:max-w-[45%] md:place-self-center md:px-5"
-            src={import(`../assets/img/pamatky/${frontmatter.singleImage}.jpg`)}
+            src=}
             alt={frontmatter.title}
             width={550}
             format={"webp"}
@@ -69,7 +69,7 @@ const testImages = [""];
       <a
         class="btn my-7 md:mt-10 w-full text-center z-auto md:hidden"
         href={`/#${frontmatter.id}`}
-        rel="prefetch">Zpět</a
+        >Zpět</a
       >
     </section>
   </div>
