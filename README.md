@@ -16,9 +16,9 @@ The Broumov Guide is built using modern web technologies to provide a seamless u
 
 ### Credits 🙏
 
-- **Developer**: [Your Name] 👨‍💻
-- **Designer**: Sara 👩‍🎨
-- **Project Initiator and Patron**: DDM Ulita Broumov (a free-time educational institution) 🎓
+- **Developer**: Martin Frommel 👨‍💻
+- **Designer**: Sara Nepila 👩‍🎨
+- **Project Initiator and Patron**: DDM Ulita Broumov 🎓
 
 The creation of the Broumov historical architecture and urbanism guide was a collective effort involving:
 - Students of Gymnázium Broumov, with texts based on materials provided by the State District Archive of Náchod, the Museum of Broumov and the Broumov City Library.
